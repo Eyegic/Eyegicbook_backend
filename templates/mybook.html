@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+书架
+{% endblock %}
+{% block body %}
+    <!-- 顶部导航栏 -->
+	<div class="header">
+		<h1 class="header-title">书架</h1>
+	</div>
+	<!-- 页面内容 -->
+	<div class="container">
+		<div class="bookitem">
+			<div class="bookcover">
+				<img src="{% static 'eyegic/images/yoga.jpg' %}" alt="bookcover">
+			</div>
+			<h class="bookname">小学一年级语文</h>
+		</div>
+		<div class="bookitem">
+			<div class="bookcover">
+				<img src="{% static 'eyegic/images/yoga.jpg' %}" alt="bookcover">
+			</div>
+			<h class="bookname">小学一年级语文</h>
+		</div>
+		<div class="bookitem">
+			<div class="bookcover">
+				<img src="{% static 'eyegic/images/yoga.jpg' %}" alt="bookcover">
+			</div>
+			<h class="bookname">小学一年级语文</h>
+		</div>
+		<div class="bookitem">
+			<div class="bookcover">
+				<img src="{% static 'eyegic/images/yoga.jpg' %}" alt="bookcover">
+			</div>
+			<h class="bookname">小学一年级语文</h>
+		</div>
+	</div>
+	<!-- 底部工具栏 -->
+	<div class="footer">
+		<ul class="navbar">
+			<li>
+				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
+				<h>书架</h>
+			</li>
+			<li>
+				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
+				<h>书架</h>
+			</li>
+			<li>
+				<div class="icon-round"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
+			</li>
+			<li>
+				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
+				<h>书架</h>
+			</li>
+			<li>
+				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
+				<h>书架</h>
+			</li>
+		</ul>
+	</div>
+{% endblock %}

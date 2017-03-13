@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+    个人中心
+{% endblock %}
+{% block body %}
+    <!-- 顶部导航栏 -->
+	<div class="header">
+		<h1 class="header-title">我</h1>
+	</div>
+	<!-- 页面内容 -->
+	<div class="container">
+	    <div class="hr15"></div>
+		<div class="info-group clearfix">
+			<div class="info-head fl"><img src="{% static 'eyegic/images/yoga.jpg' %}"></div>
+			<div class="info-name fl">
+				<h>Pandaice</h>
+				<div class="info-level">LV1</div>
+			</div>
+			<div class="info-regist fl">
+				<h>连续签到</h>
+				<h1>7</h1>
+				<div class="info-sign">签到</div>
+			</div>
+		</div>
+		<div class="hr15"></div>
+		<div class="item-group">
+			<div class="item-single clearfix">
+				<span class="item-left fl"><img src="{% static 'eyegic/images/bookstore.png' %}"></span>
+				<div class="item-middle fl">我的评论</div>
+				<span class="item-right fr"><img src="{% static 'eyegic/images/arrow.png' %}"></span>
+			</div>
+			<div class="hr1"></div>
+			<div class="item-single clearfix">
+				<span class="item-left fl"><img src="{% static 'eyegic/images/bookstore.png' %}"></span>
+				<div class="item-middle fl">消息提醒</div>
+				<span class="item-right fr"><img src="{% static 'eyegic/images/arrow.png' %}"></span>
+			</div>
+		</div>
+		<div class="hr15"></div>
+		<div class="item-group">
+			<div class="item-single clearfix">
+				<span class="item-left fl"><img src="{% static 'eyegic/images/bookstore.png' %}"></span>
+				<div class="item-middle fl">我的动态</div>
+				<span class="item-right fr"><img src="{% static 'eyegic/images/arrow.png' %}"></span>
+			</div>
+			<div class="hr1"></div>
+			<div class="item-single clearfix">
+				<span class="item-left fl"><img src="{% static 'eyegic/images/bookstore.png' %}"></span>
+				<div class="item-middle fl">我的知识树</div>
+				<span class="item-right fr"><img src="{% static 'eyegic/images/arrow.png' %}"></span>
+			</div>
+		</div>
+		<div class="hr15"></div>
+		<div class="item-single clearfix">
+			<span class="item-left fl"><img src="{% static 'eyegic/images/bookstore.png' %}"></span>
+			<div class="item-middle fl">我的设置</div>
+			<span class="item-right fr"><img src="{% static 'eyegic/images/arrow.png' %}"></span>
+		</div>
+		<div class="hr298"></div>
+	</div>
+	<!-- 底部工具栏 -->
+	<div class="footer">
+		<ul class="navbar">
+			<li>
+				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
+				<h>书架</h>
+			</li>
+			<li>
+				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
+				<h>书架</h>
+			</li>
+			<li>
+				<div class="icon-round"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
+			</li>
+			<li>
+				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
+				<h>书架</h>
+			</li>
+			<li>
+				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
+				<h>书架</h>
+			</li>
+		</ul>
+	</div>
+{% endblock %}

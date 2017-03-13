@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* 广告页 */
+.cover-content {background-color:#00BDFF; width:100%; height:1024px; text-align:center;}
+.cover-title {padding-top:150px;}
+.cover-icon {padding-top:250px;}
+.cover-motto {padding-top:250px;}
+.cover-motto h {font-size:30px; font-weight:normal; color:#fff;}
+/* 书架 */
+.header {height:70px; background-color:#00BDFF; text-align:center; position:fixed; top:0; z-index:9999; width:100%;}
+.header-title {line-height:70px; font-size:30px; color:#fff;}
+.container {position:absolute; top:70px; width:100%;}
+.bookitem {width:33.3%; float:left; margin-top:40px; text-align:center;}
+.bookcover {margin-bottom:10px;}
+.bookcover img{width:150px; height:200px;}
+.bookname {font-size:18px;}
+.footer {height:70px; border-top:2px solid #ddd; text-align:center; position:fixed; bottom:0; z-index:9999; width:100%;}
+.navbar {list-style:none; }
+.navbar li {display:inline-block; width:19.5%;}
+.icon img {width:50px; height:50px; margin:2px;}
+.icon-round img{width:90px; height:90px; border-radius:90px; position:relative; bottom:40px; border:2px solid #000;}
+/* 个人中心 */
+.info-group {height:150px;}
+.info-head {display:block; margin:25px 0 25px 80px;}
+.info-head img{width:100px; height:100px; border-radius:100px;}
+.info-name {display:block; margin:42px 0 42px 50px;}
+.info-name h {font-size:40px;}
+.info-level {background-color:red; border-radius:4px; width:40px; height:20px; color:#fff; text-align:center; line-height:20px;}
+.info-regist {display:block; margin:23px 0 23px 180px; text-align:center; padding-left:40px; border-left:2px solid #ddd;}
+.info-regist h {font-size:20px; color:#888;}
+.info-regist h1 {font-size:30px; color:red; padding:5px 0;}
+.info-sign {background-color:green; border-radius:4px; width:70px; height:30px; color:#fff; text-align:center; font-size:22px; margin:0 5px;}
+.item-group {height:150px;}
+.item-single {height:74px;}
+.item-left {display:block;}
+.item-left img {height:40px; width:40px; margin:17px 40px 17px 35px;}
+.item-middle {display:block; font-size:25px; margin:19px 0;}
+.item-right {display:block;}
+.item-right img {height:30px; width:30px;margin:22px 35px 22px 0;}
