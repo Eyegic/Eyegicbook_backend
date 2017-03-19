@@ -1,1 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
+.idea/
+.gitignore
+.DS_Store
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/dataSources/
+eyegic/migrations/__pycache__/0001_initial.cpython-36.pyc
+eyegic/migrations/__pycache__/0002_auto_20170313_1425.cpython-36.pyc

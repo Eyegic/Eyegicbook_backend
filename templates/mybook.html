@@ -1,62 +1,76 @@
-{% extends 'base.html' %}
-{% load staticfiles %}
-{% block title %}
-书架
-{% endblock %}
-{% block body %}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>书架</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
     <!-- 顶部导航栏 -->
 	<div class="header">
 		<h1 class="header-title">书架</h1>
 	</div>
+	<!-- 顶部导航栏结束 -->
 	<!-- 页面内容 -->
 	<div class="container">
 		<div class="bookitem">
 			<div class="bookcover">
-				<img src="{% static 'eyegic/images/yoga.jpg' %}" alt="bookcover">
+				<img src="images/chinese1a.jpg" alt="bookcover">
 			</div>
 			<h class="bookname">小学一年级语文</h>
 		</div>
 		<div class="bookitem">
 			<div class="bookcover">
-				<img src="{% static 'eyegic/images/yoga.jpg' %}" alt="bookcover">
+				<img src="images/chinese2a.png" alt="bookcover">
 			</div>
-			<h class="bookname">小学一年级语文</h>
+			<h class="bookname">小学二年级语文</h>
 		</div>
 		<div class="bookitem">
 			<div class="bookcover">
-				<img src="{% static 'eyegic/images/yoga.jpg' %}" alt="bookcover">
+				<img src="images/english4b.png" alt="bookcover">
 			</div>
-			<h class="bookname">小学一年级语文</h>
+			<h class="bookname">小学四年级英语</h>
 		</div>
 		<div class="bookitem">
 			<div class="bookcover">
-				<img src="{% static 'eyegic/images/yoga.jpg' %}" alt="bookcover">
+				<img src="images/math3a.png" alt="bookcover">
 			</div>
-			<h class="bookname">小学一年级语文</h>
+			<h class="bookname">小学三年级数学</h>
 		</div>
 	</div>
+	<!-- 页面内容结束 -->
 	<!-- 底部工具栏 -->
 	<div class="footer">
 		<ul class="navbar">
 			<li>
-				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
-				<h>书架</h>
+				<div class="icon"><img src="images/bookshelf-green.png" alt="icon"></div>
+				<h style="color:#00b38a;">书架</h>
 			</li>
 			<li>
-				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
-				<h>书架</h>
+				<div class="icon"><a href="index.html"><img src="images/bookstore.png" alt="icon"></a></div>
+				<h>书城</h>
 			</li>
 			<li>
-				<div class="icon-round"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
+				<div class="icon-round"><img src="images/scan.png" alt="icon"></div>
 			</li>
 			<li>
-				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
-				<h>书架</h>
+				<div class="icon"><a href="bbs.html"><img src="images/bbs.png" alt="icon"></a></div>
+				<h>互动圈</h>
 			</li>
 			<li>
-				<div class="icon"><img src="{% static 'eyegic/images/mybook.png' %}" alt="icon"></div>
-				<h>书架</h>
+				<div class="icon"><a href="center.html"><img src="images/center.png" alt="icon"></a></div>
+				<h>我</h>
 			</li>
 		</ul>
 	</div>
-{% endblock %}
+	<!-- 底部工具栏结束 -->
+</body>
+</html>

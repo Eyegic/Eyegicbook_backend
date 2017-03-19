@@ -1,25 +1,50 @@
 @charset "utf-8";
-/* 广告页 */
-.cover-content {background-color:#00BDFF; width:100%; height:1024px; text-align:center;}
-.cover-title {padding-top:150px;}
-.cover-icon {padding-top:250px;}
-.cover-motto {padding-top:250px;}
-.cover-motto h {font-size:30px; font-weight:normal; color:#fff;}
+/* 登录 注册*/
+.container-fluid {height:708px; position:absolute; top:70px; background-color:#fafafa; width:100%; text-align:center;}
+.container-fluid input {height:70px; font-size:20px;}
+.login-btn {display:inline-block; height:42px; line-height:42px; background:#ff5151; font-size:16px; color:#fff; text-align:center; padding:0 60px; border-radius:5px;}
+.regist-btn {display:inline-block; height:42px; line-height:42px; background:#3f6ce1; font-size:16px; color:#fff; text-align:center; padding:0 60px; border-radius:5px;}
+.login-form {margin-top:70px;}
+.login-form ul {margin-bottom:50px;}
+.login-form ul li {margin-bottom:10px;}
+.regist-form {margin-top:70px;}
+.regist-form ul {margin-bottom:50px;}
+.regist-form ul li {margin-bottom:10px;}
+/* 首页 */
+.showbox {position:relative; width:1024px; height:280px; overflow:hidden; background-color:#eee;}
+.imagebox {position:relative; width:1024px;  height:280px; top:0; overflow:hidden;}
+.imagebox img {display:block; width:1024px; height:280px; float:left;}
+.icobox {position:absolute; border:none; width:150px; height:5px; bottom:5px; text-align:center; line-height:40px; overflow:hidden; left:452px;}
+.icobox span {width:15px; height:5px; cursor:pointer; float:left; background-color:#ddd; margin-left:5px;}
+.icobox span.active {cursor:default; background-color:#fff;}
+.index-content {margin-bottom:120px;}
+.book-list {margin:0 20px;}
+.list-title {margin:30px 10px 15px 10px;}
+.list-title h1 {font-size:20px;}
+.list-title h2 {font-size:20px; color:#00b38a;}
+.list-title img {height:20px; width:20px; padding-top:4px;}
+.bookslide {height:5px; background-color:#eee;}
+.bookgroup {margin:20px 0; overflow:hidden; position:relative;}
+.bookbox {width:220px; text-align:center; margin-right:34px;}
+.bookbox-last {margin-right:-34px;}
+.bookbox img {width:220px; height:280px;}
+.bookbox h1 {font-size:14px; color:#888; margin-top:5px;}
 /* 书架 */
-.header {height:70px; background-color:#00BDFF; text-align:center; position:fixed; top:0; z-index:9999; width:100%;}
+.header {height:70px; background-color:#00B38a; text-align:center; position:fixed; top:0; z-index:9999; width:100%;}
 .header-title {line-height:70px; font-size:30px; color:#fff;}
-.container {position:absolute; top:70px; width:100%;}
-.bookitem {width:33.3%; float:left; margin-top:40px; text-align:center;}
+.container {position:absolute; top:70px; width:100%; padding-bottom:120px; background-color:#fafafa;}
+.bookitem {float:left; margin-top:40px; text-align:center; margin-left:90px;}
 .bookcover {margin-bottom:10px;}
-.bookcover img{width:150px; height:200px;}
+.bookcover img{width:220px; height:280px;}
 .bookname {font-size:18px;}
-.footer {height:70px; border-top:2px solid #ddd; text-align:center; position:fixed; bottom:0; z-index:9999; width:100%;}
+.footer {height:70px; border-top:2px solid #ddd; text-align:center; position:fixed; bottom:0; z-index:9999; width:100%; background-color:#fafafa;}
 .navbar {list-style:none; }
 .navbar li {display:inline-block; width:19.5%;}
-.icon img {width:50px; height:50px; margin:2px;}
-.icon-round img{width:90px; height:90px; border-radius:90px; position:relative; bottom:40px; border:2px solid #000;}
+.icon img {width:45px; height:45px; margin:2px;}
+.icon-round img{width:90px; height:90px; border-radius:90px; position:relative; bottom:40px; border:2px solid #fafafa;}
 /* 个人中心 */
-.info-group {height:150px;}
+.container-grey {position:absolute; top:70px; width:100%; background-color:#f0f0f0; padding-bottom:120px;}
+.info-group {height:150px;background-color:#fafafa;}
 .info-head {display:block; margin:25px 0 25px 80px;}
 .info-head img{width:100px; height:100px; border-radius:100px;}
 .info-name {display:block; margin:42px 0 42px 50px;}
@@ -29,10 +54,50 @@
 .info-regist h {font-size:20px; color:#888;}
 .info-regist h1 {font-size:30px; color:red; padding:5px 0;}
 .info-sign {background-color:green; border-radius:4px; width:70px; height:30px; color:#fff; text-align:center; font-size:22px; margin:0 5px;}
-.item-group {height:150px;}
-.item-single {height:74px;}
+.item-group {height:150px;background-color:#fafafa;}
+.item-single {height:74px;background-color:#fafafa;}
 .item-left {display:block;}
 .item-left img {height:40px; width:40px; margin:17px 40px 17px 35px;}
 .item-middle {display:block; font-size:25px; margin:19px 0;}
 .item-right {display:block;}
 .item-right img {height:30px; width:30px;margin:22px 35px 22px 0;}
+/* 互动圈 */
+.header-icon-right {height:35px; width:35px; position:absolute; top:18px; right:30px;}
+.bbs-block {background-color:#fafafa; padding:0 20px;}
+.block-title {padding:20px 0;}
+.block-title img {height:50px; width:50px; border-radius:30px;}
+.block-title span {font-size:18px; color:#888; margin-left:15px;}
+.block-content {padding-bottom:20px;margin-left:15px;}
+.block-content h1 {font-size:23px; font-weight:bold; margin-bottom:10px;}
+.block-content h2 {font-size:18px;}
+.block-footer {margin-left:15px; padding-bottom:20px;}
+.block-footer span {font-size:18px; color:#888;}
+/* 书本详细 */
+.header-icon-left {height:35px; width:35px; position:absolute; top:18px; left:30px;}
+.detail-content {padding:40px 70px 50px 70px; background-color:#fafafa;}
+.detail-content img {width:220px; height:280px;}
+.detail-topic {margin-left:40px;}
+.detail-topic h1 {font-size:30px; font-weight:bold; padding-bottom:5px; border-bottom:solid 1px #ddd;}
+.detail-topic ul {margin-top:40px;}
+.detail-topic ul li {font-size:20px;margin-bottom:10px;}
+.save-btn {background-color:#168CC6; border-radius:5px; padding:5px 0; text-align:center;}
+.save-btn img {width:22px; height:22px;}
+.save-btn span {color:#fff; font-size:20px;}
+.detail-group {padding:40px 70px 30px 70px; background-color:#fafafa;}
+.detail-unit {margin-bottom:15px;}
+.detail-unit img {width:30px; height:30px;}
+.detail-unit span {font-size:25px; font-weight:bold; margin-right:5px;}
+.detail-text {font-size:20px;}
+.detail-text ul {margin-left:50px;}
+.detail-text ul li {margin-bottom:10px;}
+/* 课文详细 */
+.context-pic {position:relative;}
+.context-pic img {height:350px; width:1024px;}
+.context-title {position:absolute; top:150px; left:390px; font-size:30px; padding:10px 40px; background-color:rgba(255,255,255,0.8);border-radius:30px; border:solid 2px #fff;}
+.context-group {padding:40px 70px 30px 70px; background-color:#fafafa;}
+.context-unit {margin-bottom:15px;}
+.context-unit img {width:30px; height:30px;}
+.context-unit span {font-size:25px; font-weight:bold; margin-right:5px;}
+.context-text {font-size:20px;}
+.context-text ul {margin-left:50px;}
+.context-text ul li {margin-bottom:10px;}

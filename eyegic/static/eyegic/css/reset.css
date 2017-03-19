@@ -29,8 +29,9 @@ a:hover{text-decoration:none;}
 .wrap{width:1180px;margin:0 auto;}
 .tac{text-align:center;}
 .hr1{background-color:#ddd; height:1px; margin:0 30px;}
-.hr15 {height:15px; background:#eee;}
-.hr298 {height:298px; background-color:#eee;}
+.hr15 {height:15px;}
+.hr15-grey {height:15px; background-color:#f0f0f0;}
+.hr298 {height:298px;}
 /*btn*/
 .btn-red-big{display:inline-block;height:42px;line-height:42px;background:#3f6ce1;font-size:16px;color:#fff;text-align:center;padding:0 40px;border-radius:3px;}
 .btn-blue-big{display:inline-block;height:42px;line-height:42px;background:#4877ed;font-size:16px;color:#fff;text-align:center;padding:0 40px;border-radius:3px;}
