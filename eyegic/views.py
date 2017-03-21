@@ -68,12 +68,20 @@ def bookdetail(request):
 
     bookid=request.GET.get('bookid')
     book=Book.objects.get(id=bookid)
-    return render(request,'bookdetail.html',{'book':book})
+    unit1 = BookText.objects.filter(unit__book=book).filter(unit__unitnum=1).order_by('textnum')
+    unit2 = BookText.objects.filter(unit__book=book).filter(unit__unitnum=2).order_by('textnum')
+    unit3 = BookText.objects.filter(unit__book=book).filter(unit__unitnum=3).order_by('textnum')
+    unit4 = BookText.objects.filter(unit__book=book).filter(unit__unitnum=4).order_by('textnum')
+    unit5 = BookText.objects.filter(unit__book=book).filter(unit__unitnum=5).order_by('textnum')
+
+    return render(request,'bookdetail.html',{'book':book,'unit1':unit1,'unit2':unit2,'unit3':unit3,'unit4':unit4,'unit5':unit5})
 
 def context(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
-    return render(request,'context.html')
+    textid=request.GET.get('textid')
+    text=BookText.objects.get(id=textid)
+    return render(request,'context.html',{'text':text})
 
 def index(request):
     return render(request,'index.html')

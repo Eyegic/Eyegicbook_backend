@@ -49,9 +49,9 @@
     		</div>
     		<div class="detail-text">
     			<ul>
-    				<a href="context.html"><li><span>1.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
-    				<a href="context.html"><li><span>2.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
-    				<a href="context.html"><li><span>3.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
+                {% for foo in unit1 %}
+    				<a href="context.html?textid={{ foo.id }}"><li><span>{{ foo.textnum }}.</span>&nbsp;<span>{{ foo.title }}</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
+                {% endfor %}
     			</ul>
     		</div>
     	</div>
@@ -63,9 +63,9 @@
     		</div>
     		<div class="detail-text">
     			<ul>
-    				<a href="context.html"><li><span>1.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
-                    <a href="context.html"><li><span>2.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
-                    <a href="context.html"><li><span>3.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
+                {% for foo in unit2 %}
+    				<a href="context.html?textid={{ foo.id }}"><li><span>{{ foo.textnum }}.</span>&nbsp;<span>{{ foo.title }}</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
+                {% endfor %}
     			</ul>
     		</div>
     	</div>
@@ -77,9 +77,9 @@
     		</div>
     		<div class="detail-text">
     			<ul>
-    				<a href="context.html"><li><span>1.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
-                    <a href="context.html"><li><span>2.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
-                    <a href="context.html"><li><span>3.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
+                {% for foo in unit3 %}
+    				<a href="context.html?textid={{ foo.id }}"><li><span>{{ foo.textnum }}.</span>&nbsp;<span>{{ foo.title }}</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
+                {% endfor %}
     			</ul>
     		</div>
     	</div>
@@ -91,9 +91,9 @@
     		</div>
     		<div class="detail-text">
     			<ul>
-    				<a href="context.html"><li><span>1.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
-                    <a href="context.html"><li><span>2.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
-                    <a href="context.html"><li><span>3.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
+                {% for foo in unit4 %}
+    				<a href="context.html?textid={{ foo.id }}"><li><span>{{ foo.textnum }}.</span>&nbsp;<span>{{ foo.title }}</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
+                {% endfor %}
     			</ul>
     		</div>
     	</div>
@@ -105,10 +105,10 @@
             </div>
             <div class="detail-text">
                 <ul>
-                    <a href="context.html"><li><span>1.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
-                    <a href="context.html"><li><span>2.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
-                    <a href="context.html"><li><span>3.</span>&nbsp;<span>老师领进门</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
-                </ul>
+                {% for foo in unit5 %}
+    				<a href="context.html?textid={{ foo.id }}"><li><span>{{ foo.textnum }}.</span>&nbsp;<span>{{ foo.title }}</span><span class="fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span></li></a>
+                {% endfor %}
+    			</ul>
             </div>
         </div>
     </div>
