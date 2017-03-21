@@ -68,13 +68,15 @@ def bookdetail(request):
 
     bookid=request.GET.get('bookid')
     book=Book.objects.get(id=bookid)
+    user=User.objects.get(phone=request.session.get('username'))
+    favor=BookFavor.objects.get(book=book,user=user)
     unit1 = BookText.objects.filter(unit__book=book).filter(unit__unitnum=1).order_by('textnum')
     unit2 = BookText.objects.filter(unit__book=book).filter(unit__unitnum=2).order_by('textnum')
     unit3 = BookText.objects.filter(unit__book=book).filter(unit__unitnum=3).order_by('textnum')
     unit4 = BookText.objects.filter(unit__book=book).filter(unit__unitnum=4).order_by('textnum')
     unit5 = BookText.objects.filter(unit__book=book).filter(unit__unitnum=5).order_by('textnum')
 
-    return render(request,'bookdetail.html',{'book':book,'unit1':unit1,'unit2':unit2,'unit3':unit3,'unit4':unit4,'unit5':unit5})
+    return render(request,'bookdetail.html',{'favor':favor,'book':book,'unit1':unit1,'unit2':unit2,'unit3':unit3,'unit4':unit4,'unit5':unit5})
 
 def context(request):
     if not isLogin(request):
@@ -84,7 +86,10 @@ def context(request):
     return render(request,'context.html',{'text':text})
 
 def index(request):
-    return render(request,'index.html')
+    chinese = Book.objects.filter(subject='chinese')[:4]
+    math = Book.objects.filter(subject='math')[:4]
+    english = Book.objects.filter(subject='english')[:4]
+    return render(request,'index.html',{'chinese':chinese,'math':math,'english':english})
 
 def login(request):
     if request.method=='POST':
@@ -159,7 +164,7 @@ def isLogin(request):
 
 @csrf_exempt
 def add_favor_book(request):
-    bookid=request.POST.get('bookid')
+    bookid=request.POST.get('book_id')
     phone=request.session.get('username')
     user=User.objects.get(phone=phone)
     book=Book.objects.get(id=bookid)

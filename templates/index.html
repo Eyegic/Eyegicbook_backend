@@ -45,22 +45,12 @@
             </div>
             <div class="bookslide"></div>
             <div class="bookgroup clearfix">
+                {% for foo in chinese %}
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/chinese1a.jpg"></a>
-                    <h1>一年级语文</h1>
+                    <a href="bookdetail.html?bookid={{ foo.id }}"><img src="{{ EYEGIC_STATIC }}images/{{ foo.cover }}"></a>
+                    <h1>{{ foo.bookname }}</h1>
                 </div>
-                <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/chinese1b.jpg"></a>
-                    <h1>二年级语文</h1>
-                </div>
-                <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/chinese2a.png"></a>
-                    <h1>三年级语文</h1>
-                </div>
-                <div class="bookbox fl bookbox-last">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/chinese2b.png"></a>
-                    <h1>四年级语文</h1>
-                </div>
+                {% endfor %}
             </div>
         </div>
         <div class="book-list">
@@ -71,22 +61,12 @@
             </div>
             <div class="bookslide"></div>
             <div class="bookgroup clearfix">
+                {% for foo in math %}
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/math1a.png"></a>
-                    <h1>一年级数学</h1>
+                    <a href="bookdetail.html?bookid={{ foo.id }}"><img src="{{ EYEGIC_STATIC }}images/{{ foo.cover }}"></a>
+                    <h1>{{ foo.bookname }}</h1>
                 </div>
-                <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/math1b.jpg"></a>
-                    <h1>二年级数学</h1>
-                </div>
-                <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/math2a.png"></a>
-                    <h1>三年级数学</h1>
-                </div>
-                <div class="bookbox fl bookbox-last">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/math3a.png"></a>
-                    <h1>四年级数学</h1>
-                </div>
+                {% endfor %}
             </div>
         </div>
         <div class="book-list">
@@ -97,22 +77,12 @@
             </div>
             <div class="bookslide"></div>
             <div class="bookgroup clearfix">
+                {% for foo in english %}
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/english4b.png"></a>
-                    <h1>一年级英语</h1>
+                    <a href="bookdetail.html?bookid={{ foo.id }}"><img src="{{ EYEGIC_STATIC }}images/{{ foo.cover }}"></a>
+                    <h1>{{ foo.bookname }}</h1>
                 </div>
-                <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/english2b.png"></a>
-                    <h1>二年级英语</h1>
-                </div>
-                <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/english1a.jpg"></a>
-                    <h1>三年级英语</h1>
-                </div>
-                <div class="bookbox fl bookbox-last">
-                    <a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/english5b.png"></a>
-                    <h1>四年级英语</h1>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
