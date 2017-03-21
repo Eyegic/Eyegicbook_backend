@@ -35,4 +35,12 @@ urlpatterns = [
     url(r'^makecomment',views.makeComment),
     url(r'^setup',views.setup),
     url(r'^subject-all',views.subject_all),
+    url(r'^category',views.category),
+    url(r'^cover',views.cover),
+    url(r'^makeanswer',views.makeanswer),
+    url(r'^myactivity',views.myactivity),
+    url(r'^mycomment',views.mycomment),
+    url(r'^mymessage',views.mymessage),
+    url(r'^mytree',views.mytree),
+    url(r'^search',views.search)
 ]

@@ -10,7 +10,10 @@ def center(request):
 def mybook(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
-    return render(request,'mybook.html')
+    name=request.session['username']
+    user=User.objects.get(nickname=name)
+    book=BookFavor.objects.get(user=user)
+    return render(request,'mybook.html',{'book':book})
 
 def bbsdetail(request):
     if not isLogin(request):
@@ -90,6 +93,44 @@ def register(request):
         return HttpResponse('regist success!')
     else:
         return render(request,'regist.html')
+
+def category(request):
+    if not isLogin(request):
+        return HttpResponseRedirect('login')
+    return render(request,'category.html')
+
+def cover(request):
+    return render(request,'cover.html')
+
+def makeanswer(request):
+    if not isLogin(request):
+        return HttpResponseRedirect('login')
+    return render(request,'makeanswer.html')
+
+def myactivity(request):
+    if not isLogin(request):
+        return HttpResponseRedirect('login')
+    return render(request,'myactivity.html')
+
+def mycomment(request):
+    if not isLogin(request):
+        return HttpResponseRedirect('login')
+    return render(request,'mycomment.html')
+
+def mymessage(request):
+    if not isLogin(request):
+        return HttpResponseRedirect('login')
+    return render(request,'mymessage.html')
+
+def search(request):
+    if not isLogin(request):
+        return HttpResponseRedirect('login')
+    return render(request,'search.html')
+
+def mytree(request):
+    if not isLogin(request):
+        return HttpResponseRedirect('login')
+    return render(request,'mytree.html')
 
 def logout(request):
     del request.session['username']
