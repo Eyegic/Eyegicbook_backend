@@ -20,6 +20,7 @@ class Book(models.Model):
     version=models.CharField(max_length=10)
     modelurl=models.CharField(max_length=50)
     model_size=models.DecimalField(max_digits=6,decimal_places=1)
+    subject_cn=models.CharField(max_length=10)
     def __str__(self):
         return self.bookname
 

@@ -42,5 +42,6 @@ urlpatterns = [
     url(r'^mycomment',views.mycomment),
     url(r'^mymessage',views.mymessage),
     url(r'^mytree',views.mytree),
-    url(r'^search',views.search)
+    url(r'^search',views.search),
+    url(r'^add_favor_book',views.add_favor_book)
 ]

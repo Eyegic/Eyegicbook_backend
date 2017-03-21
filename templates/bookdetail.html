@@ -15,7 +15,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('.save-btn').click(function(){
-            $.post("url", {}, function(){
+            $.post("add_fovor_book", {book_id:'{{ book.id }}'}, function(){
                 $('.save-btn').css("background-color", "#ddd");
             })
         })
@@ -31,12 +31,12 @@
     	<div class="detail-content clearfix">
     		<img src="{{ EYEGIC_STATIC }}images/chinese1a.jpg" class="fl">
     		<div class="detail-topic fl">
-    			<h1>一年级语文</h1>
+    			<h1>{{ book.bookname }}</h1>
     			<ul>
-    				<li><span>科目：</span><span>语文</span></li>
-    				<li><span>版本：</span><span>沪教版</span></li>
-    				<li><span>年级：</span><span>一年级</span></li>
-    				<li><span>大小：</span><span>212.9MB</span></li>
+    				<li><span>科目：</span><span>{{ book.subject_cn }}</span></li>
+    				<li><span>版本：</span><span>{{ book.publish }}</span></li>
+    				<li><span>年级：</span><span>{{ book.grade }}</span></li>
+    				<li><span>大小：</span><span>{{ book.model_size}}MB</span></li>
     			</ul>
     			<div class="save-btn"><span><img src="{{ EYEGIC_STATIC }}images/favor.png"></span><span>收藏到书架</span></div>
     		</div>

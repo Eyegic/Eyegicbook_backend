@@ -21,12 +21,13 @@
     	<a href="regist.html"><span class="header-title-right">注册</span></a>
     </div>
     <div class="container-fluid">
-    	<form id="login" method="post" class="login-form">
+    	<form id="login" method="post" class="login-form" action="login">
+            {% csrf_token %}
     		<ul>
     			<li><input type="text" name="name" placeholder="手机号码/邮箱"></li>
     			<li><input type="password" name="password" placeholder="密码"></li>
     		</ul>
-    		<a href="#"><div class="login-btn">登录</div></a>
+    		<a href="#" onclick="$('#login').submit()"><div class="login-btn">登录</div></a>
     	</form>
     </div>
 </body>

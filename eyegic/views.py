@@ -2,6 +2,8 @@
 from django.shortcuts import render,HttpResponseRedirect,HttpResponse
 from eyegic.models import *
 from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
+
 # Create your views here.
 
 def global_setting(request):
@@ -16,8 +18,8 @@ def mybook(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
     name=request.session['username']
-    user=User.objects.get(nickname=name)
-    book=BookFavor.objects.get(user=user)
+    user=User.objects.get(phone=name)
+    book=BookFavor.objects.filter(user=user)
     return render(request,'mybook.html',{'book':book})
 
 def bbsdetail(request):
@@ -63,7 +65,10 @@ def bbs(request):
 def bookdetail(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
-    return render(request,'bookdetail.html')
+
+    bookid=request.GET.get('bookid')
+    book=Book.objects.get(id=bookid)
+    return render(request,'bookdetail.html',{'book':book})
 
 def context(request):
     if not isLogin(request):
@@ -77,7 +82,7 @@ def login(request):
     if request.method=='POST':
         name=request.POST['name']
         password=request.POST['password']
-        user = User.objects.filter(nickname=name).filter(password=password)
+        user = User.objects.filter(phone=name).filter(password=password)
         if user.exists():
             request.session['username']=name
             return HttpResponse('login success!')
@@ -90,10 +95,10 @@ def register(request):
     if request.method =='POST':
         name=request.POST['name']
         password=request.POST['password']
-        user = User.objects.filter(nickname=name)
+        user = User.objects.filter(phone=name)
         if user.exists():
             return HttpResponse('username already exist!')
-        user=User(nickname=name,password=password)
+        user=User(phone=name,password=password)
         user.save()
         return HttpResponse('regist success!')
     else:
@@ -143,3 +148,12 @@ def logout(request):
 
 def isLogin(request):
     return request.session.get('username',default=None) is not None
+
+@csrf_exempt
+def add_favor_book(request):
+    bookid=request.POST.get('bookid')
+    phone=request.session.get('username')
+    user=User.objects.get(phone=phone)
+    book=Book.objects.get(id=bookid)
+    BookFavor.objects.get_or_create(user=user,book=book)
+    return HttpResponse('add to favor success!')
