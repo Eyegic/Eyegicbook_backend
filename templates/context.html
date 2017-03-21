@@ -32,17 +32,27 @@
                 <ul>
                     <li>
                         <span>1.</span>&nbsp;
-                        <span>阅读课文，找一找运用了何种修辞方法。</span>
-                        <a href="makeanswer.html"><span class="fr"><img src="{{ EYEGIC_STATIC }}images/write.png"></span></a>
+                        <span>{{ question1 }}</span>
+                        <a href="makeanswer.html?questionid={{ question1.id }}"><span class="fr"><img src="{{ EYEGIC_STATIC }}images/write.png"></span></a>
                         <br>
-                        <div class="context-answer">
-                            我也不知道自己说了点什么我也不知道自己说了点什么我也不知道自己说了点什么我也不知道自己说了点什么我也不知道自己说了点什么我也不知道自己说了点什么
-                        </div>
+                        {% if answer1 %}
+                            <div class="context-answer">
+                                {{ answer1 }}
+                            </div>
+                        {% endif %}
+
                     </li>
                     <li>
                         <span>2.</span>&nbsp;
-                        <span>背诵课文第一小节。</span>
-                        <span class="fr"><img src="{{ EYEGIC_STATIC }}images/done.png"></span>
+                        <span>{{ question1 }}</span>
+                        <a href="makeanswer.html?questionid={{ question2.id }}"><span class="fr"><img src="{{ EYEGIC_STATIC }}images/write.png"></span></a>
+                        <br>
+                        {% if answer2 %}
+                            <div class="context-answer">
+                                {{ answer2 }}
+                            </div>
+                        {% endif %}
+
                     </li>
                 </ul>
             </div>
@@ -57,25 +67,27 @@
                 <ul>
                     <li>
                         <span>1.</span>&nbsp;
-                        <span>联系课文内容，说说下列词语的意思</span>
-                        <a href="makeanswer.html"><span class="fr"><img src="{{ EYEGIC_STATIC }}images/write.png"></span></a>
+                        <span>{{ question3 }}</span>
+                        <a href="makeanswer.html?questionid={{ question3.id }}"><span class="fr"><img src="{{ EYEGIC_STATIC }}images/write.png"></span></a>
                         <br>
-                        <span class="word-activity">引人注目</span><span class="word-activity">别出心裁</span>
-                        <br>
-                        <div class="context-answer">
-                            我也不知道自己说了点什么
-                        </div>
+                        {% if answer3 %}
+                            <div class="context-answer">
+                                {{ answer3 }}
+                            </div>
+                        {% endif %}
+
                     </li>
                     <li>
                         <span>2.</span>&nbsp;
-                        <span>读一读，用下划线的词语造句。</span>
-                        <a href="makeanswer.html"><span class="fr"><img src="{{ EYEGIC_STATIC }}images/write.png"></span></a>
+                        <span>{{ question4 }}</span>
+                        <a href="makeanswer.html?questionid={{ question4.id }}"><span class="fr"><img src="{{ EYEGIC_STATIC }}images/write.png"></span></a>
                         <br>
-                        <span class="sentence-activity">Google公司在某些特殊人物、事件的纪念日或重大节庆时，会特别设计<em>别出心裁</em>的涂鸦标志。</span>
-                        <br>
-                        <div class="context-answer">
-                            我也不知道自己说了点什么
-                        </div>
+                        {% if answer4 %}
+                            <div class="context-answer">
+                                {{ answer4 }}
+                            </div>
+                        {% endif %}
+
                     </li>
                 </ul>
             </div>
@@ -90,21 +102,27 @@
                 <ul>
                     <li>
                         <span>1.</span>&nbsp;
-                        <span>你还知道哪些关于Google及它的创始人的故事？说给大家听听？</span>
-                        <a href="makeanswer.html"><span class="fr"><img src="{{ EYEGIC_STATIC }}images/write.png"></span></a>
+                        <span>{{ question5 }}</span>
+                        <a href="makeanswer.html?questionid={{ question5.id }}"><span class="fr"><img src="{{ EYEGIC_STATIC }}images/write.png"></span></a>
                         <br>
-                        <div class="context-answer">
-                            我也不知道自己说了点什么
-                        </div>
+                        {% if answer5 %}
+                            <div class="context-answer">
+                                {{ answer5 }}
+                            </div>
+                        {% endif %}
+
                     </li>
                     <li>
                         <span>2.</span>&nbsp;
-                        <span>你了解过Google公司的发展历史吗？与大家分享一下吧。</span>
-                        <a href="makeanswer.html"><span class="fr"><img src="{{ EYEGIC_STATIC }}images/write.png"></span></a>
+                        <span>{{ question6 }}</span>
+                        <a href="makeanswer.html?questionid={{ question6.id }}"><span class="fr"><img src="{{ EYEGIC_STATIC }}images/write.png"></span></a>
                         <br>
-                        <div class="context-answer">
-                            我也不知道自己说了点什么
-                        </div>
+                        {% if answer6 %}
+                            <div class="context-answer">
+                                {{ answer6 }}
+                            </div>
+                        {% endif %}
+
                     </li>
                 </ul>
             </div>

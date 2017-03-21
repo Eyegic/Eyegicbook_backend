@@ -1,8 +1,11 @@
 #-*-coding:utf-8-*-
+import datetime
 from django.shortcuts import render,HttpResponseRedirect,HttpResponse
 from eyegic.models import *
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
+from django.utils import timezone
+
 
 # Create your views here.
 
@@ -12,7 +15,9 @@ def global_setting(request):
 def center(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
-    return render(request,'center.html')
+    user=User.objects.get(phone=request.session.get('username'))
+
+    return render(request,'center.html',{'user':user})
 
 def mybook(request):
     if not isLogin(request):
@@ -54,8 +59,12 @@ def setup(request):
 def subject_all(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
+    subject = request.GET.get('subject')
+    if not subject:
+        books=Book.objects.all()
     else:
-        return render(request,'subject-all.html')
+        books=Book.objects.filter(subject=subject)
+    return render(request,'subject-all.html',{'books':books})
 
 def bbs(request):
     if not isLogin(request):
@@ -82,8 +91,29 @@ def context(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
     textid=request.GET.get('textid')
+    user=User.objects.get(phone=request.session.get('username'))
     text=BookText.objects.get(id=textid)
-    return render(request,'context.html',{'text':text})
+    question1=Questions.objects.filter(booktext=text).filter(type=1).get(num=1)
+    question2=Questions.objects.filter(booktext=text).filter(type=1).get(num=2)
+    question3=Questions.objects.filter(booktext=text).filter(type=2).get(num=1)
+    question4=Questions.objects.filter(booktext=text).filter(type=2).get(num=2)
+    question5=Questions.objects.filter(booktext=text).filter(type=3).get(num=1)
+    question6=Questions.objects.filter(booktext=text).filter(type=3).get(num=2)
+    answer1 = Answer.objects.filter(question=question1).get(user=user)
+    answer2 = Answer.objects.filter(question=question2).get(user=user)
+    answer3 = Answer.objects.filter(question=question3).get(user=user)
+    answer4 = Answer.objects.filter(question=question4).get(user=user)
+    answer5 = Answer.objects.filter(question=question5).get(user=user)
+    answer6 = Answer.objects.filter(question=question6).get(user=user)
+
+    return render(request,'context.html',{
+        'text':text,'question1':question1,'question2':question2,
+        'question3':question3,'question4':question4,
+        'question5':question5,'question6':question6,
+        'answer1':answer1,'answer2':answer2,
+        'answer3':answer3,'answer4':answer4,
+        'answer5':answer5,'answer6':answer6
+    })
 
 def index(request):
     chinese = Book.objects.filter(subject='chinese')[:4]
@@ -128,7 +158,21 @@ def cover(request):
 def makeanswer(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
-    return render(request,'makeanswer.html')
+    if request.method=='GET':
+        question_id=request.GET.get('questionid')
+        question=Questions(id=question_id)
+        return render(request,'makeanswer.html',{'question':question})
+    else:
+        question_id=request.POST.get('question_id')
+        user=User.objects.get(phone=request.session.get('username'))
+        question=Questions.objects.get(id=question_id)
+        text_id=question.booktext.id
+        comment=request.POST.get('comment')
+        time=timezone.now()
+        answer=Answer(user=user,question=question,answer=comment,time=time)
+        answer.save()
+        return HttpResponseRedirect('context.html?text_id='+text_id.__str__())
+
 
 def myactivity(request):
     if not isLogin(request):

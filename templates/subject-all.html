@@ -23,34 +23,15 @@
 	<!-- 顶部导航栏结束 -->
 	<!-- 页面内容 -->
 	<div class="container">
+        {% for book in books %}
 		<div class="bookitem">
 			<div class="bookcover">
-				<a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/chinese1a.jpg" alt="bookcover"></a>
+				<a href="bookdetail.html?bookid={{ book.id }}"><img src="{{ EYEGIC_STATIC }}images/{{ book.cover }}" alt="bookcover"></a>
 			</div>
-			<h class="bookname">小学一年级语文</h>
+			<h class="bookname">{{ book.bookname}}</h>
 			<h class="download">收藏</h>
 		</div>
-		<div class="bookitem">
-			<div class="bookcover">
-				<a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/chinese2a.png" alt="bookcover"></a>
-			</div>
-			<h class="bookname">小学二年级语文</h>
-			<h class="download">收藏</h>
-		</div>
-		<div class="bookitem">
-			<div class="bookcover">
-				<a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/english4b.png" alt="bookcover"></a>
-			</div>
-			<h class="bookname">小学四年级英语</h>
-			<h class="download">收藏</h>
-		</div>
-		<div class="bookitem">
-			<div class="bookcover">
-				<a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/math3a.png" alt="bookcover"></a>
-			</div>
-			<h class="bookname">小学三年级数学</h>
-			<h class="download">收藏</h>
-		</div>
+        {% endfor %}
 	</div>
 	<!-- 页面内容结束 -->
 </body>
