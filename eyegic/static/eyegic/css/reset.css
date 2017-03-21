@@ -5,7 +5,7 @@ html,body{-webkit-text-size-adjust:none;-webkit-user-select:none;-webkit-tap-hig
 body{margin:0 auto;background:#fff;}
 h1, h2, h3, h4, h5, h6{font-size:100%;font-weight:normal;}
 ul, ol{list-style:none;}
-a{color:#666;text-decoration:none;outline:none;blr:expression(this.onFocus=this.blur());}
+a{text-decoration:none;outline:none;blr:expression(this.onFocus=this.blur());}
 img{vertical-align:middle;border:0;max-width:100%;}
 address, cite, dfn, em, var ,i{font-style:normal;}
 input{outline:0;}
@@ -19,7 +19,7 @@ textarea{resize:none;}
 table{border-collapse:collapse;border-spacing:0;}
 title{display:inline-block;}
 header, footer, article, section, nav, menu, hgroup{display:block;clear:all;}
-a{color:#4877ed;text-decoration:none;}
+a{color:#000; text-decoration:none;}
 a:hover{text-decoration:none;}
 .oh{overflow:hidden;}
 .fl{float:left;}

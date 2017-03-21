@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>登录</title>
+<title>评论输入</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -16,19 +16,17 @@
 <script type="text/javascript" src="{% static 'eyegic/js/jquery.min.js' %} "></script>
 </head>
 <body>
-    <div class="header">
-    	<span><img src="{% static 'eyegic/images/search.png' %} " class="header-icon-left"></span>
-    	<h1 class="header-title">登录</h1>
-    	<span><img src="{% static 'eyegic/images/search.png' %} " class="header-icon-right"></span>
-    </div>
-    <div class="container-fluid">
-    	<form id="login" method="post" class="login-form">
-    		<ul>
-    			<li><input type="text" name="name" placeholder="手机号码/邮箱"></li>
-    			<li><input type="password" name="password" placeholder="密码"></li>
-    		</ul>
-    		<a href="#"><div class="login-btn">登录</div></a>
-    	</form>
-    </div>
+    <!-- 顶部导航栏 -->
+	<div class="header">
+		<a href="javascript:history.back()"><h1 class="header-left">取消</h1></a>
+		<h1 class="header-title">评论</h1>
+		<h1 class="header-right">发布</h1>
+	</div>
+	<!-- 顶部导航栏结束 -->
+	<!-- 页面内容 -->
+	<div class="container">
+	    <input type="textarea" name="comment" class="comment-area" placeholder="请输入评论">
+	</div>
+	<!-- 页面内容结束 -->
 </body>
 </html>

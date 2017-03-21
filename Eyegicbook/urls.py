@@ -19,9 +19,20 @@ from eyegic import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^cover/',views.cover),
-    url(r'^center/',views.center),
-    url(r'^mybook/',views.mybook),
-    url(r'^index',views.center),
-
+    url(r'^center',views.center),
+    url(r'^mybook',views.mybook),
+    url(r'^bbsdetail',views.bbsdetail),
+    url(r'^bookdetail',views.bookdetail),
+    url(r'^bbs',views.bbs),
+    url(r'^context',views.context),
+    url(r'^index',views.index),
+    url(r'^login',views.login),
+    url(r'^regist',views.register),
+    url(r'^logout',views.logout),
+    url(r'^book',views.bbsdetail),
+    url(r'^comment',views.comment),
+    url(r'^feedback',views.feedback),
+    url(r'^makecomment',views.makeComment),
+    url(r'^setup',views.setup),
+    url(r'^subject-all',views.subject_all),
 ]

@@ -10,12 +10,12 @@ class User(models.Model):
         ('GIRL','GIRL')
     )
     gender=models.CharField(max_length=4,choices=GENDER_CHOICES,default='BOY')
-
-
+    password = models.CharField(max_length=30)
     age=models.IntegerField(default=0)
     grade=models.CharField(max_length=10)
     phone=models.CharField(max_length=12)
     email=models.EmailField()
+
     def __str__(self):
         return self.nickname
 
@@ -33,6 +33,9 @@ class BookText(models.Model):
     book=models.ForeignKey(Book)
     unit=models.CharField(max_length=5)
     textmodel=models.CharField(max_length=50)
+    textname=models.CharField(max_length=20)
+    def __str__(self):
+        return self.textname
 
 
 class Questions(models.Model):
@@ -41,14 +44,18 @@ class Questions(models.Model):
     type=models.CharField(max_length=20)
 
 class Answer(models.Model):
+    answer = models.ForeignKey(User)
     question=models.ForeignKey(Questions)
     answer=models.TextField()
     praise=models.IntegerField(default=0)
+    time=models.DateTimeField()
+
 
 
 class Comment(models.Model):
     answer=models.ForeignKey(Answer)
     content=models.TextField()
+    time = models.DateTimeField()
 
 class TextModel(models.Model):
     modelurl=models.CharField(max_length=50)
