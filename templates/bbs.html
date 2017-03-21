@@ -21,60 +21,25 @@
 	<!-- 顶部导航栏结束 -->
 	<!-- 页面内容 -->
 	<div class="container-grey">
+        {% for answer in answers %}
 	    <div class="hr15"></div>
-		<a href="bbsdetail.html"><div class="bbs-block">
+		<a href="bbsdetail.html?answer_id={{ answer.id }}"><div class="bbs-block">
 			<div class="block-title">
 				<span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-				<span class="from">来自教材：</span><span class="tag">一年级</span><span class="tag">沪教版</span><span class="tag">语文</span><span class="tag">开国大典</span>
+				<span class="from">来自教材：</span><span class="tag">{{ answer.question.booktext.unit.book.grade }}</span><span class="tag">{{ answer.question.booktext.unit.book.publish }}</span><span class="tag">{{ answer.question.booktext.unit.book.subject_cn }}</span><span class="tag">{{ answer.question.booktext.title }}</span>
 			</div>
 			<div class="block-content">
-				<h1>在《开国大典》这篇课文中你印象最深刻的场景？</h1>
-				<h2>天明：文章中描绘的毛主席在天安门城楼上高声宣布“中华人民共和国成立的那一刹那，我仿佛身临其境，感到热血澎湃，可以感受到新中国成立人民当家做主的自豪感！</h2>
+				<h1>{{ answer.question.question }}？</h1>
+				<h2>{{ answer.user.nickname }}：{{ answer.answer }}</h2>
 			</div>
 			<div class="block-footer">
-				<span>11赞同</span>
+				<span>{{ answer.praise }}</span>
 				<span>·</span>
-				<span>22评论</span>
 				<span>·</span>
 				<span>收藏问题</span>
 			</div>
 		</div></a>
-		<div class="hr15"></div>
-		<a href="bbsdetail.html"><div class="bbs-block">
-			<div class="block-title">
-				<span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-				<span class="from">来自教材：</span><span class="tag">一年级</span><span class="tag">沪教版</span><span class="tag">语文</span><span class="tag">开国大典</span>
-			</div>
-			<div class="block-content">
-				<h1>在《开国大典》这篇课文中你印象最深刻的场景？</h1>
-				<h2>天明：文章中描绘的毛主席在天安门城楼上高声宣布“中华人民共和国成立的那一刹那，我仿佛身临其境，感到热血澎湃，可以感受到新中国成立人民当家做主的自豪感！</h2>
-			</div>
-			<div class="block-footer">
-				<span>11赞同</span>
-				<span>·</span>
-				<span>22评论</span>
-				<span>·</span>
-				<span>收藏问题</span>
-			</div>
-		</div></a>
-		<div class="hr15"></div>
-		<a href="bbsdetail.html"><div class="bbs-block">
-			<div class="block-title">
-				<span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-				<span class="from">来自教材：</span><span class="tag">一年级</span><span class="tag">沪教版</span><span class="tag">语文</span><span class="tag">开国大典</span>
-			</div>
-			<div class="block-content">
-				<h1>在《开国大典》这篇课文中你印象最深刻的场景？</h1>
-				<h2>天明：文章中描绘的毛主席在天安门城楼上高声宣布“中华人民共和国成立的那一刹那，我仿佛身临其境，感到热血澎湃，可以感受到新中国成立人民当家做主的自豪感！</h2>
-			</div>
-			<div class="block-footer">
-				<span>11赞同</span>
-				<span>·</span>
-				<span>22评论</span>
-				<span>·</span>
-				<span>收藏问题</span>
-			</div>
-		</div></a>
+        {% endfor %}
 		<div class="hr15"></div>
 	</div>
 	<!-- 页面内容结束 -->

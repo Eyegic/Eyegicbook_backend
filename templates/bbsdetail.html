@@ -33,23 +33,23 @@
     <!-- 顶部导航栏 -->
 	<div class="header">
 		<a href="javascript:history.back()"><span><img src="{{ EYEGIC_STATIC }}images/back.png" class="header-icon-left"></span></a>
-		<h1 class="header-title">开国大典</h1>
+		<h1 class="header-title">{{ answer.question.booktext.title }}</h1>
 	</div>
 	<!-- 顶部导航栏结束 -->
 	<!-- 页面内容 -->
 	<div class="container-grey">
 	    <div class="bbs-question">
-	    	<h1>在《开国大典》这篇课文中你印象最深刻的场景？</h1>
+	    	<h1>{{ answer.question.question }}</h1>
 	    </div>
 		<div class="hr15"></div>
 		<div class="bbs-author">
 			<div class="block-title">
 				<span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-				<span class="from">来自教材：</span><span class="tag">一年级</span><span class="tag">沪教版</span><span class="tag">语文</span><span class="tag">开国大典</span>
+				<span class="from">来自教材：</span><span class="tag">{{ answer.question.booktext.unit.book.grade }}</span><span class="tag">{{ answer.question.booktext.unit.book.grade }}</span><span class="tag">{{ answer.question.booktext.unit.book.subject_cn }}</span><span class="tag">{{ answer.question.booktext.title }}</span>
 			</div>
 		</div>
 		<div class="bbs-answer">
-			<h1>文章中描绘的毛主席在天安门城楼上高声宣布“中华人民共和国成立的那一刹那，我仿佛身临其境，感到热血澎湃，可以感受到新中国成立人民当家做主的自豪感！</h1>
+			<h1>{{ answer.answer }}</h1>
 		</div>
 	</div>
 	<!-- 页面内容结束 -->
@@ -58,7 +58,7 @@
 		<ul class="navbar">
 			<li id="zan">
 				<div class="icon"><img src="{{ EYEGIC_STATIC }}images/zan.png" alt="icon"></div>
-				<h>赞同(660)</h>
+				<h>赞同({{ answer.praise }})</h>
 			</li>
 			<li id="thanks">
 				<div class="icon"><img src="{{ EYEGIC_STATIC }}images/thanks.png" alt="icon"></div>
@@ -69,7 +69,7 @@
 				<h>加入收藏</h>
 			</li>
 			<li id="comment">
-				<a href="comment.html"><div class="icon"><img src="{{ EYEGIC_STATIC }}images/comment.png" alt="icon"></div>
+				<a href="comment.html?answer_id={{ answer.id }}"><div class="icon"><img src="{{ EYEGIC_STATIC }}images/comment.png" alt="icon"></div>
 				<h>评论(451)</h></a>
 			</li>
 		</ul>

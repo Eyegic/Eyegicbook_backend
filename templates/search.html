@@ -16,8 +16,10 @@
 <body>
     <!-- 顶部导航栏 -->
 	<div class="header">
+        <form action="search" method="get" id="search">
 		<a href="javascript:history.back()"><span><img src="{{ EYEGIC_STATIC }}images/back.png" class="header-icon-left"></span></a>
 		<div class="search-bar"><input type="text" name="search" placeholder="在书城中搜索"></div>
+        </form>
 	</div>
 	<!-- 顶部导航栏结束 -->
 	<!-- 页面内容 -->
@@ -29,14 +31,9 @@
 	    </div></a>
 	    <div class="search-tag clearfix">
 	    	<h1>为您推荐</h1>
-	    	<a href="#"><div class="fl tag-item">一年级苏教版语文</div></a>
-	    	<a href="#"><div class="fl tag-item">一年级苏教版语文</div></a>
-	    	<a href="#"><div class="fl tag-item">一年级苏教版语文</div></a>
-	    	<a href="#"><div class="fl tag-item">一年级苏教版语文</div></a>
-	    	<a href="#"><div class="fl tag-item">一年级苏教版语文</div></a>
-	    	<a href="#"><div class="fl tag-item">一年级苏教版语文</div></a>
-	    	<a href="#"><div class="fl tag-item">一年级苏教版语文</div></a>
-	    	<a href="#"><div class="fl tag-item">一年级苏教版语文</div></a>
+            {% for book in books %}
+	    	<a href="bookdetail.html?bookid={{ book.id }}"><div class="fl tag-item">{{ book.bookname }}</div></a>
+            {% endfor %}
 	    </div>
 	    <div class="hr15-grey"></div>
 	    <div class="search-history">

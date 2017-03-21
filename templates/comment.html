@@ -23,42 +23,21 @@
 	<!-- 顶部导航栏结束 -->
 	<!-- 页面内容 -->
 	<div class="container">
+        {% for foo in comments %}
 	    <div class="comment-block">
 	    	<div class="comment-title">
-				<span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-				<span>倩倩</span>
+				<span><img src="{{ EYEGIC_STATIC }}images/{{ foo.user.avater }}"></span>
+				<span>{{ foo.user.nickname }}</span>
 			</div>
 			<div class="comment-content">
-				<h1>我觉得你说的很有道理</h1>
+				<h1>{{ foo.comment }}</h1>
 			</div>
 			<div class="comment-bar">
-				<span><img src="{{ EYEGIC_STATIC }}images/zan.png"></span><span>·</span><a href="makecomment.html"><span>回复</span></a><span>·</span><span>16/12/2017</span>
+				<span><img src="{{ EYEGIC_STATIC }}images/zan.png"></span><span>·</span><a href="makecomment.html?answer_id={{ foo.answer_id }}"><span>回复</span></a><span>·</span><span>{{ foo.time }}</span>
 			</div>
 	    </div>
-	    <div class="comment-block">
-	    	<div class="comment-title">
-				<span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-				<span>谢斌</span><i><img src="{{ EYEGIC_STATIC }}images/toward.png"></i><span>倩倩</span>
-			</div>
-			<div class="comment-content">
-				<h1>我觉得你说的很有道理</h1>
-			</div>
-			<div class="comment-bar">
-				<span><img src="{{ EYEGIC_STATIC }}images/zan.png"></span><span>·</span><a href="makecomment.html"><span>回复</span></a><span>·</span><span>16/12/2017</span>
-			</div>
-	    </div>
-	    <div class="comment-block">
-	    	<div class="comment-title">
-				<span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-				<span>倩倩</span>
-			</div>
-			<div class="comment-content">
-				<h1>我觉得你说的很有道理</h1>
-			</div>
-			<div class="comment-bar">
-				<span><img src="{{ EYEGIC_STATIC }}images/zan.png"></span><span>·</span><a href="makecomment.html"><span>回复</span></a><span>·</span><span>16/12/2017</span>
-			</div>
-	    </div>
+        {% endfor %}
+
 	</div>
 	<!-- 页面内容结束 -->
 </body>

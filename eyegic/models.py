@@ -68,3 +68,7 @@ class AnswerMark(models.Model):
 class BookFavor(models.Model):
     user=models.ForeignKey(User)
     book=models.ForeignKey(Book)
+
+class SearchHistory(models.Model):
+    user=models.ForeignKey(User)
+    search=models.CharField(max_length=30)

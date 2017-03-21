@@ -31,12 +31,16 @@ def bbsdetail(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
     else:
-        return render(request,'bbsdetail.html')
+        answer_id=request.GET.get('answer_id')
+        answer=Answer.objects.get(id=answer_id)
+        return render(request,'bbsdetail.html',{'answer':answer})
 def comment(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
     else:
-        return render(request,'comment.html')
+        answer_id=request.GET.get('answer_id')
+        comments=Comment.objects.filter(answer_id=answer_id)
+        return render(request,'comment.html',{'comments':comments})
 
 def feedback(request):
     if not isLogin(request):
@@ -48,7 +52,17 @@ def makeComment(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
     else:
-        return render(request,'makecomment.html')
+        if request.method=='POST':
+            answer_id=request.POST.get('answer_id')
+            user=User.objects.get(phone=request.session.get('username'))
+            comment=request.POST.get('comment')
+            time=timezone.now()
+            answer=Answer.objects.get(id=answer_id)
+            c=Comment(answer=answer,user=user,comment=comment,time=time)
+            c.save()
+        else:
+            answer_id=request.GET.get('answer_id')
+        return render(request,'makecomment.html',{'answer_id',answer_id})
 
 def setup(request):
     if not isLogin(request):
@@ -69,7 +83,8 @@ def subject_all(request):
 def bbs(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
-    return render(request,'bbs.html')
+    answers=Answer.objects.all()
+    return render(request,'bbs.html',{'answers':answers})
 
 def bookdetail(request):
     if not isLogin(request):
@@ -191,12 +206,22 @@ def mycomment(request):
 def mymessage(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
-    return render(request,'mymessage.html')
+    user = User.objects.get(phone=request.session.get('username'))
+    answer=Answer.objects.filter(user=user)
+    comments=Comment.objects.filter(answer__in=answer)
+    return render(request,'mymessage.html',{'comments':comments})
 
 def search(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
-    return render(request,'search.html')
+    if request.method=='POST':
+        keyword=request.GET.get('search')
+        user = User.objects.get(phone=request.session.get('username'))
+        books=Book.objects.filter(bookname__contains=keyword)
+        SearchHistory.objects.get_or_create(user=user,search=keyword)
+    else:
+        books=Book.objects.all()[:8]
+    return render(request,'search.html',{'books':books})
 
 def mytree(request):
     if not isLogin(request):
