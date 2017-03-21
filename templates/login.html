@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html>
 <head>
@@ -9,13 +10,13 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/reset.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/main.css' %} ">
+<script type="text/javascript" src="{% static 'eyegic/js/jquery.min.js' %} "></script>
 </head>
 <body>
     <div class="header">
-    	<span><img src="images/back.png" class="header-icon-left"></span>
+    	<span><img src="{% static 'eyegic/images/back.png' %} " class="header-icon-left"></span>
     	<h1 class="header-title">登录</h1>
     	<a href="regist.html"><span class="header-title-right">注册</span></a>
     </div>

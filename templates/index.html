@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <html>
 <head>
 <meta charset="utf-8">
@@ -8,21 +9,21 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/shuffling.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/reset.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/main.css' %} ">
+<script type="text/javascript" src="{% static 'eyegic/js/jquery.min.js' %} "></script>
+<script type="text/javascript" src="{% static 'eyegic/js/shuffling.js' %} "></script>
 </head>
 <body>
     <!-- 顶部轮播图 -->
     <div class="showbox">
         <div class="imagebox">
-            <img src="images/shuffle1.png" alt="shuffle1">
-            <img src="images/shuffle2.png" alt="shuffle2">
-            <img src="images/shuffle3.png" alt="shuffle3">
-            <img src="images/shuffle4.png" alt="shuffle4">
-            <img src="images/shuffle5.png" alt="shuffle5">
-            <img src="images/shuffle6.png" alt="shuffle6">
+            <img src="{% static 'eyegic/images/shuffle1.png' %} " alt="shuffle1">
+            <img src="{% static 'eyegic/images/shuffle2.png' %} " alt="shuffle2">
+            <img src="{% static 'eyegic/images/shuffle3.png' %} " alt="shuffle3">
+            <img src="{% static 'eyegic/images/shuffle4.png' %} " alt="shuffle4">
+            <img src="{% static 'eyegic/images/shuffle5.png' %} " alt="shuffle5">
+            <img src="{% static 'eyegic/images/shuffle6.png' %} " alt="shuffle6">
         </div>
         <div class="icobox">
             <span rel="0" class="active">0</span>
@@ -39,25 +40,25 @@
         <div class="book-list">
             <div class="list-title clearfix">
                 <h1 class="fl">语文推荐</h1>
-                <span class="fr"><img src="images/arrow-green.png"></span>
+                <span class="fr"><img src="{% static 'eyegic/images/arrow-green.png' %} "></span>
                 <a href="subject-all.html"><h2 class="fr">查看全部</h2></a>
             </div>
             <div class="bookslide"></div>
             <div class="bookgroup clearfix">
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="images/chinese1a.jpg"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/chinese1a.jpg' %} "></a>
                     <h1>一年级语文</h1>
                 </div>
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="images/chinese1b.jpg"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/chinese1b.jpg' %} "></a>
                     <h1>二年级语文</h1>
                 </div>
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="images/chinese2a.png"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/chinese2a.png' %} "></a>
                     <h1>三年级语文</h1>
                 </div>
                 <div class="bookbox fl bookbox-last">
-                    <a href="bookdetail.html"><img src="images/chinese2b.png"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/chinese2b.png' %} "></a>
                     <h1>四年级语文</h1>
                 </div>
             </div>
@@ -65,25 +66,25 @@
         <div class="book-list">
             <div class="list-title clearfix">
                 <h1 class="fl">数学推荐</h1>
-                <span class="fr"><img src="images/arrow-green.png"></span>
+                <span class="fr"><img src="{% static 'eyegic/images/arrow-green.png' %} "></span>
                 <a href="subject-all.html"><h2 class="fr">查看全部</h2></a>
             </div>
             <div class="bookslide"></div>
             <div class="bookgroup clearfix">
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="images/math1a.png"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/math1a.png' %} "></a>
                     <h1>一年级数学</h1>
                 </div>
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="images/math1b.jpg"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/math1b.jpg' %} "></a>
                     <h1>二年级数学</h1>
                 </div>
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="images/math2a.png"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/math2a.png' %} "></a>
                     <h1>三年级数学</h1>
                 </div>
                 <div class="bookbox fl bookbox-last">
-                    <a href="bookdetail.html"><img src="images/math3a.png"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/math3a.png' %} "></a>
                     <h1>四年级数学</h1>
                 </div>
             </div>
@@ -91,25 +92,25 @@
         <div class="book-list">
             <div class="list-title clearfix">
                 <h1 class="fl">英语推荐</h1>
-                <span class="fr"><img src="images/arrow-green.png"></span>
+                <span class="fr"><img src="{% static 'eyegic/images/arrow-green.png' %} "></span>
                 <a href="subject-all.html"><h2 class="fr">查看全部</h2></a>
             </div>
             <div class="bookslide"></div>
             <div class="bookgroup clearfix">
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="images/english4b.png"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/english4b.png' %} "></a>
                     <h1>一年级英语</h1>
                 </div>
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="images/english2b.png"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/english2b.png' %} "></a>
                     <h1>二年级英语</h1>
                 </div>
                 <div class="bookbox fl">
-                    <a href="bookdetail.html"><img src="images/english1a.jpg"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/english1a.jpg' %} "></a>
                     <h1>三年级英语</h1>
                 </div>
                 <div class="bookbox fl bookbox-last">
-                    <a href="bookdetail.html"><img src="images/english5b.png"></a>
+                    <a href="bookdetail.html"><img src="{% static 'eyegic/images/english5b.png' %} "></a>
                     <h1>四年级英语</h1>
                 </div>
             </div>
@@ -120,22 +121,22 @@
 	<div class="footer">
 		<ul class="navbar">
 			<li>
-				<div class="icon"><a href="mybook.html"><img src="images/bookshelf.png" alt="icon"></a></div>
+				<div class="icon"><a href="mybook.html"><img src="{% static 'eyegic/images/bookshelf.png' %} " alt="icon"></a></div>
 				<h>书架</h>
 			</li>
 			<li>
-				<div class="icon"><img src="images/bookstore-green.png" alt="icon"></div>
+				<div class="icon"><img src="{% static 'eyegic/images/bookstore-green.png' %} " alt="icon"></div>
 				<h style="color:#00b38a;">书城</h>
 			</li>
 			<li>
-				<div class="icon-round"><img src="images/scan.png" alt="icon"></div>
+				<div class="icon-round"><img src="{% static 'eyegic/images/scan.png' %} " alt="icon"></div>
 			</li>
 			<li>
-				<div class="icon"><a href="bbs.html"><img src="images/bbs.png" alt="icon"></a></div>
+				<div class="icon"><a href="bbs.html"><img src="{% static 'eyegic/images/bbs.png' %} " alt="icon"></a></div>
 				<h>互动圈</h>
 			</li>
 			<li>
-				<div class="icon"><a href="center.html"><img src="images/center.png" alt="icon"></a></div>
+				<div class="icon"><a href="center.html"><img src="{% static 'eyegic/images/center.png' %} " alt="icon"></a></div>
 				<h>我</h>
 			</li>
 		</ul>

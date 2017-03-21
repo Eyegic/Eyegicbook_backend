@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html>
 <head>
@@ -9,23 +10,23 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/reset.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/main.css' %} ">
+<script type="text/javascript" src="{% static 'eyegic/js/jquery.min.js' %} "></script>
 </head>
 <body>
     <div class="header">
-    	<a href="javascript:history.back()"><span><img src="images/back.png" class="header-icon-left"></span></a>
+    	<a href="javascript:history.back()"><span><img src="{% static 'eyegic/images/back.png' %} " class="header-icon-left"></span></a>
         <h1 class="header-title">课文</h1>
     </div>
     <div class="container-grey">
     	<div class="context-pic">
-            <img src="images/shuffle1.png">
+            <img src="{% static 'eyegic/images/shuffle1.png' %} ">
             <span class="context-title">引人注目的Google标志</span>
         </div>
         <div class="context-group">
             <div class="detail-unit">
-                <span><img src="images/part1.png"></span>
+                <span><img src="{% static 'eyegic/images/part1.png' %} "></span>
                 <span>阅读芳草地</span>
             </div>
             <div class="context-text">
@@ -33,7 +34,7 @@
                     <li>
                         <span>1.</span>&nbsp;
                         <span>阅读课文，找一找运用了何种修辞方法。</span>
-                        <a href="makeanswer.html"><span class="fr"><img src="images/write.png"></span></a>
+                        <a href="makeanswer.html"><span class="fr"><img src="{% static 'eyegic/images/write.png' %} "></span></a>
                         <br>
                         <div class="context-answer">
                             我也不知道自己说了点什么我也不知道自己说了点什么我也不知道自己说了点什么我也不知道自己说了点什么我也不知道自己说了点什么我也不知道自己说了点什么
@@ -42,7 +43,7 @@
                     <li>
                         <span>2.</span>&nbsp;
                         <span>背诵课文第一小节。</span>
-                        <span class="fr"><img src="images/done.png"></span>
+                        <span class="fr"><img src="{% static 'eyegic/images/done.png' %} "></span>
                     </li>
                 </ul>
             </div>
@@ -50,7 +51,7 @@
         <div class="hr15"></div>
         <div class="context-group">
             <div class="detail-unit">
-                <span><img src="images/part2.png"></span>
+                <span><img src="{% static 'eyegic/images/part2.png' %} "></span>
                 <span>词句活动室</span>
             </div>
             <div class="context-text">
@@ -58,7 +59,7 @@
                     <li>
                         <span>1.</span>&nbsp;
                         <span>联系课文内容，说说下列词语的意思</span>
-                        <a href="makeanswer.html"><span class="fr"><img src="images/write.png"></span></a>
+                        <a href="makeanswer.html"><span class="fr"><img src="{% static 'eyegic/images/write.png' %} "></span></a>
                         <br>
                         <span class="word-activity">引人注目</span><span class="word-activity">别出心裁</span>
                         <br>
@@ -69,7 +70,7 @@
                     <li>
                         <span>2.</span>&nbsp;
                         <span>读一读，用下划线的词语造句。</span>
-                        <a href="makeanswer.html"><span class="fr"><img src="images/write.png"></span></a>
+                        <a href="makeanswer.html"><span class="fr"><img src="{% static 'eyegic/images/write.png' %} "></span></a>
                         <br>
                         <span class="sentence-activity">Google公司在某些特殊人物、事件的纪念日或重大节庆时，会特别设计<em>别出心裁</em>的涂鸦标志。</span>
                         <br>
@@ -83,7 +84,7 @@
         <div class="hr15"></div>
         <div class="context-group">
             <div class="detail-unit">
-                <span><img src="images/part3.png"></span>
+                <span><img src="{% static 'eyegic/images/part3.png' %} "></span>
                 <span>语言直播厅</span>
             </div>
             <div class="context-text">
@@ -91,7 +92,7 @@
                     <li>
                         <span>1.</span>&nbsp;
                         <span>你还知道哪些关于Google及它的创始人的故事？说给大家听听？</span>
-                        <a href="makeanswer.html"><span class="fr"><img src="images/write.png"></span></a>
+                        <a href="makeanswer.html"><span class="fr"><img src="{% static 'eyegic/images/write.png' %} "></span></a>
                         <br>
                         <div class="context-answer">
                             我也不知道自己说了点什么
@@ -100,7 +101,7 @@
                     <li>
                         <span>2.</span>&nbsp;
                         <span>你了解过Google公司的发展历史吗？与大家分享一下吧。</span>
-                        <a href="makeanswer.html"><span class="fr"><img src="images/write.png"></span></a>
+                        <a href="makeanswer.html"><span class="fr"><img src="{% static 'eyegic/images/write.png' %} "></span></a>
                         <br>
                         <div class="context-answer">
                             我也不知道自己说了点什么

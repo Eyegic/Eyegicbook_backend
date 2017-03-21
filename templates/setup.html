@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html>
 <head>
@@ -9,14 +10,14 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/reset.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/main.css' %} ">
+<script type="text/javascript" src="{% static 'eyegic/js/jquery.min.js' %} "></script>
 </head>
 <body>
     <!-- 顶部导航栏 -->
 	<div class="header">
-		<a href="javascript:history.back()"><span><img src="images/back.png" class="header-icon-left"></span></a>
+		<a href="javascript:history.back()"><span><img src="{% static 'eyegic/images/back.png' %} " class="header-icon-left"></span></a>
 		<h1 class="header-title">设置</h1>
 	</div>
 	<!-- 顶部导航栏结束 -->
@@ -24,15 +25,15 @@
 	<div class="container-grey">
 	    <div class="set-privacy">
 	    	<h2>账号和隐私</h2>
-	    	<h1 style=" border-bottom:solid 1px #ddd;">账号绑定<span class="fr"><img src="images/arrow.png"></span></h1>
+	    	<h1 style=" border-bottom:solid 1px #ddd;">账号绑定<span class="fr"><img src="{% static 'eyegic/images/arrow.png' %} "></span></h1>
 	    	<h1 style=" border-bottom:solid 1px #ddd;">版本更新<span class="fr">发现新版本</span></h1>
-	    	<a href="feedback.html"><h1>意见反馈<span class="fr"><img src="images/arrow.png"></span></h1></a>
+	    	<a href="feedback.html"><h1>意见反馈<span class="fr"><img src="{% static 'eyegic/images/arrow.png' %} "></span></h1></a>
 	    </div>
 	    <div class="hr15"></div>
 	    <div class="set-privacy">
 	    	<h2>关于</h2>
-	    	<h1  style=" border-bottom:solid 1px #ddd;">关于Eyegic<span class="fr"><img src="images/arrow.png"></span></h1>
-	    	<h1>免责声明<span class="fr"><img src="images/arrow.png"></span></h1>
+	    	<h1  style=" border-bottom:solid 1px #ddd;">关于Eyegic<span class="fr"><img src="{% static 'eyegic/images/arrow.png' %} "></span></h1>
+	    	<h1>免责声明<span class="fr"><img src="{% static 'eyegic/images/arrow.png' %} "></span></h1>
 	    </div>
 	    <div class="hr15"></div>
 	    <a href="login.html"><div class="set-btn">切换账号</div></a>

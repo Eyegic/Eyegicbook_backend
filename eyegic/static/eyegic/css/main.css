@@ -1,15 +1,15 @@
 @charset "utf-8";
 /* 登录 注册*/
 .container-fluid {height:708px; position:absolute; top:70px; background-color:#fafafa; width:100%; text-align:center;}
-.container-fluid input {height:70px; font-size:20px;}
-.login-btn {display:inline-block; height:42px; line-height:42px; background:#ff5151; font-size:16px; color:#fff; text-align:center; padding:0 60px; border-radius:5px;}
-.regist-btn {display:inline-block; height:42px; line-height:42px; background:#3f6ce1; font-size:16px; color:#fff; text-align:center; padding:0 60px; border-radius:5px;}
-.login-form {margin-top:70px;}
+.container-fluid input {height:70px; font-size:20px; width:500px;}
+.login-btn {display:inline-block; width:350px; height:70px; line-height:70px; background:#ff5151; font-size:25px; color:#fff; text-align:center; padding:0 60px; border-radius:5px;}
+.regist-btn {display:inline-block; width:350px; height:70px; line-height:70px; background:#ff5151; font-size:25px; color:#fff; text-align:center; padding:0 60px; border-radius:5px;}
+.login-form {margin-top:100px;}
 .login-form ul {margin-bottom:50px;}
-.login-form ul li {margin-bottom:10px;}
+.login-form ul li {margin-bottom:2px;}
 .regist-form {margin-top:70px;}
 .regist-form ul {margin-bottom:50px;}
-.regist-form ul li {margin-bottom:10px;}
+.regist-form ul li {margin-bottom:2px;}
 /* 首页 */
 .showbox {position:relative; width:1024px; height:280px; overflow:hidden; background-color:#eee;}
 .imagebox {position:relative; width:1024px;  height:280px; top:0; overflow:hidden;}
@@ -32,6 +32,7 @@
 /* 书架 */
 .header {height:70px; background-color:#00B38a; text-align:center; position:fixed; top:0; z-index:9999; width:100%;}
 .header-title {line-height:70px; font-size:30px; color:#fff;}
+.header-title-right {line-height:70px; font-size:30px; color:#fff; position:absolute; top: 0px; right:30px;}
 .container {position:absolute; top:70px; width:100%; padding-bottom:120px;}
 .bookitem {float:left; margin-top:40px; text-align:center; margin-left:90px;}
 .bookcover {margin-bottom:10px;}
@@ -102,10 +103,11 @@
 .context-text {font-size:22px; line-height:60px; letter-spacing:2px;}
 .context-text ul li {margin-bottom:10px; border-bottom:solid 1px #ddd;  padding-left:100px;}
 .context-text ul li span {margin-right:10px;}
-.context-text ul li span img {width:25px; height:25px; margin-right:15px;}
+.context-text ul li span img {width:25px; height:25px; margin-right:15px; position:relative; top:-5px;}
 .word-activity {margin-left:40px;}
 .sentence-activity {margin-left:40px;}
 .sentence-activity em {text-decoration:underline;}
+.context-answer {width:750px; border-radius:5px; background-color:#c1e4e9; padding:5px 10px; margin-bottom:20px; margin-left:45px; font-size:20px; line-height:40px; color:#444;}
 /* 互动圈详细 */
 .bbs-question {background-color:#fafafa;}
 .bbs-question h1 {font-size:25px; padding:20px 20px; font-weight:bold;}
@@ -116,11 +118,12 @@
 /* 评论页面 */
 .comment-block {margin-top:20px;}
 .comment-title img {height:50px; width:50px; border-radius:30px; margin:0 30px;}
-.comment-title span {font-size:25px; font-weight:bold;}
+.comment-title span {font-size:25px; font-weight:bold; line-height:30px;}
+.comment-title i img {height:30px; width:30px; margin:0 5px; position:relative; top:-6px;}
 .comment-content {margin-left:110px; margin-top:10px; margin-bottom:15px;}
 .comment-content h1 {font-size:25px;}
 .comment-bar {margin-left:110px; border-bottom:solid 1px #ddd; padding-bottom:20px; margin-right:20px;}
-.comment-bar img {height:30px; width:30px;}
+.comment-bar img {height:25px; width:30px;}
 .comment-bar span {font-size:20px; color:#888; margin-right:10px;}
 /* 评论输入 */
 .header-left {line-height:70px; font-size:30px; color:#fff; position:absolute; left:30px;}
@@ -141,3 +144,31 @@
 .set-privacy span {margin-right:30px; font-size:20px; color:#C57B0A; line-height:36px;}
 .set-privacy span img {height:25px; width:25px;}
 .set-btn {line-height:76px; font-size:25px; text-align:center; color:#00b38a; background-color:#fff;}
+/* 搜索页面 */
+.search-bar {line-height:70px;}
+.search-bar input {height:50px; width:800px; background-color:#00b38a; outline:none; font-size:25px; border-width:0px 0px 2px 0px; color:#fff;}
+.search-category {height:80px; line-height:80px; text-align:center; background-color:#fafafa;}
+.search-category span {line-height:80px; font-size:25px; margin:0 5px; color:#444;}
+.search-category span img{width:30px; height:30px;}
+.search-tag {font-size:20px;}
+.search-tag h1 {color:#888; padding:30px 0 0 40px;}
+.tag-item {margin-left:40px; margin-top:30px; border:2px solid #ddd; border-radius:30px; padding:10px 10px;}
+.search-history {font-size:20px;}
+.search-history h1 {color:#888; padding:30px 0 40px 40px;}
+.history-item {text-align:center; color:#888;}
+/* 图书分类 */
+.category-subject {margin:40px 40px;}
+.category-subject span {font-size:25px; color:#888;}
+.category-subject img {height:40px; width:40px;}
+.subject-item {height:120px; width:120px; border-radius:120px; margin:0 0 20px 110px;}
+.subject-item img {height:60px; width:60px; margin:30px 30px;}
+.subject-title {font-size:20px; margin:0 0 40px 150px;}
+#chinese {background-color:#a0d8ef;}
+#english {background-color:#e83929;}
+#math {background-color:#eb6ea5;}
+#physic {background-color:#3eb370;}
+#chemistry {background-color:#38b48b;}
+#biology {background-color:#e9546b;}
+#politic {background-color:#89c3eb;}
+#history {background-color:#7058a3;}
+#geography {background-color:#f5b1aa;}

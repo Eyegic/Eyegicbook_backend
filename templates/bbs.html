@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html>
 <head>
@@ -9,15 +10,15 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/reset.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/main.css' %} ">
+<script type="text/javascript" src="{% static 'eyegic/js/jquery.min.js' %} "></script>
 </head>
 <body>
     <!-- 顶部导航栏 -->
 	<div class="header">
 		<h1 class="header-title">互动圈</h1>
-		<span><img src="images/search.png" class="header-icon-right"></span>
+		<span><img src="{% static 'eyegic/images/search.png' %} " class="header-icon-right"></span>
 	</div>
 	<!-- 顶部导航栏结束 -->
 	<!-- 页面内容 -->
@@ -25,7 +26,7 @@
 	    <div class="hr15"></div>
 		<a href="bbsdetail.html"><div class="bbs-block">
 			<div class="block-title">
-				<span><img src="images/yoga.jpg"></span>
+				<span><img src="{% static 'eyegic/images/yoga.jpg' %} "></span>
 				<span class="from">来自教材：</span><span class="tag">一年级</span><span class="tag">沪教版</span><span class="tag">语文</span><span class="tag">开国大典</span>
 			</div>
 			<div class="block-content">
@@ -43,7 +44,7 @@
 		<div class="hr15"></div>
 		<a href="bbsdetail.html"><div class="bbs-block">
 			<div class="block-title">
-				<span><img src="images/yoga.jpg"></span>
+				<span><img src="{% static 'eyegic/images/yoga.jpg' %} "></span>
 				<span class="from">来自教材：</span><span class="tag">一年级</span><span class="tag">沪教版</span><span class="tag">语文</span><span class="tag">开国大典</span>
 			</div>
 			<div class="block-content">
@@ -61,7 +62,7 @@
 		<div class="hr15"></div>
 		<a href="bbsdetail.html"><div class="bbs-block">
 			<div class="block-title">
-				<span><img src="images/yoga.jpg"></span>
+				<span><img src="{% static 'eyegic/images/yoga.jpg' %} "></span>
 				<span class="from">来自教材：</span><span class="tag">一年级</span><span class="tag">沪教版</span><span class="tag">语文</span><span class="tag">开国大典</span>
 			</div>
 			<div class="block-content">
@@ -83,22 +84,22 @@
 	<div class="footer">
 		<ul class="navbar">
 			<li>
-				<div class="icon"><a href="mybook.html"><img src="images/bookshelf.png" alt="icon"></a></div>
+				<div class="icon"><a href="mybook.html"><img src="{% static 'eyegic/images/bookshelf.png' %} " alt="icon"></a></div>
 				<h>书架</h>
 			</li>
 			<li>
-				<div class="icon"><a href="index.html"><img src="images/bookstore.png" alt="icon"></a></div>
+				<div class="icon"><a href="index.html"><img src="{% static 'eyegic/images/bookstore.png' %} " alt="icon"></a></div>
 				<h>书城</h>
 			</li>
 			<li>
-				<div class="icon-round"><img src="images/scan.png" alt="icon"></div>
+				<div class="icon-round"><img src="{% static 'eyegic/images/scan.png' %} " alt="icon"></div>
 			</li>
 			<li>
-				<div class="icon"><img src="images/bbs-green.png" alt="icon"></div>
+				<div class="icon"><img src="{% static 'eyegic/images/bbs-green.png' %} " alt="icon"></div>
 				<h style="color:#00b38a;">互动圈</h>
 			</li>
 			<li>
-				<div class="icon"><a href="center.html"><img src="images/center.png" alt="icon"></a></div>
+				<div class="icon"><a href="center.html"><img src="{% static 'eyegic/images/center.png' %} " alt="icon"></a></div>
 				<h>我</h>
 			</li>
 		</ul>

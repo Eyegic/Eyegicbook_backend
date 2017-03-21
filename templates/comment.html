@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html>
 <head>
@@ -9,54 +10,54 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/reset.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/main.css' %} ">
+<script type="text/javascript" src="{% static 'eyegic/js/jquery.min.js' %} "></script>
 </head>
 <body>
     <!-- 顶部导航栏 -->
 	<div class="header">
-		<a href="javascript:history.back()"><span><img src="images/back.png" class="header-icon-left"></span></a>
+		<a href="javascript:history.back()"><span><img src="{% static 'eyegic/images/back.png' %} " class="header-icon-left"></span></a>
 		<h1 class="header-title">评论</h1>
-		<a href="makecomment.html"><span><img src="images/add.png" class="header-icon-right"></span></a>
+		<a href="makecomment.html"><span><img src="{% static 'eyegic/images/add.png' %} " class="header-icon-right"></span></a>
 	</div>
 	<!-- 顶部导航栏结束 -->
 	<!-- 页面内容 -->
 	<div class="container">
 	    <div class="comment-block">
 	    	<div class="comment-title">
-				<span><img src="images/yoga.jpg"></span>
+				<span><img src="{% static 'eyegic/images/yoga.jpg' %} "></span>
 				<span>倩倩</span>
 			</div>
 			<div class="comment-content">
 				<h1>我觉得你说的很有道理</h1>
 			</div>
 			<div class="comment-bar">
-				<span><img src="images/zan.png"></span><span>·</span><a href="makecomment.html"><span>回复</span></a><span>·</span><span>16/12/2017</span>
+				<span><img src="{% static 'eyegic/images/zan.png' %} "></span><span>·</span><a href="makecomment.html"><span>回复</span></a><span>·</span><span>16/12/2017</span>
 			</div>
 	    </div>
 	    <div class="comment-block">
 	    	<div class="comment-title">
-				<span><img src="images/yoga.jpg"></span>
-				<span>谢斌</span><i><img src="images/toward.png"></i><span>倩倩</span>
+				<span><img src="{% static 'eyegic/images/yoga.jpg' %} "></span>
+				<span>谢斌</span><i><img src="{% static 'eyegic/images/toward.png' %} "></i><span>倩倩</span>
 			</div>
 			<div class="comment-content">
 				<h1>我觉得你说的很有道理</h1>
 			</div>
 			<div class="comment-bar">
-				<span><img src="images/zan.png"></span><span>·</span><a href="makecomment.html"><span>回复</span></a><span>·</span><span>16/12/2017</span>
+				<span><img src="{% static 'eyegic/images/zan.png' %} "></span><span>·</span><a href="makecomment.html"><span>回复</span></a><span>·</span><span>16/12/2017</span>
 			</div>
 	    </div>
 	    <div class="comment-block">
 	    	<div class="comment-title">
-				<span><img src="images/yoga.jpg"></span>
+				<span><img src="{% static 'eyegic/images/yoga.jpg' %} "></span>
 				<span>倩倩</span>
 			</div>
 			<div class="comment-content">
 				<h1>我觉得你说的很有道理</h1>
 			</div>
 			<div class="comment-bar">
-				<span><img src="images/zan.png"></span><span>·</span><a href="makecomment.html"><span>回复</span></a><span>·</span><span>16/12/2017</span>
+				<span><img src="{% static 'eyegic/images/zan.png' %} "></span><span>·</span><a href="makecomment.html"><span>回复</span></a><span>·</span><span>16/12/2017</span>
 			</div>
 	    </div>
 	</div>
