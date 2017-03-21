@@ -19,78 +19,22 @@
     	<h1 class="header-title">我的评论</h1>
     </div>
     <div class="container-grey">
+        {% for comment in comments %}
         <div class="mycomment">
             <div class="mycomment-title">
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <span>谢斌</span><i><img src="{{ EYEGIC_STATIC }}images/toward.png"></i><span>倩倩</span>
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <em class="fr mycomment-date">17-03-04</em>
+                <span><img src="{{ EYEGIC_STATIC }}images/{{ comment.user.avater }}"></span>
+                <span>{{ comment.user.nickname }}</span><i><img src="{{ EYEGIC_STATIC }}images/toward.png"></i><span>{{ comment.answer.user.nickname }}</span>
+                <span><img src="{{ EYEGIC_STATIC }}images/{{ comment.answer.user.avater }}"></span>
+                <em class="fr mycomment-date">{{ comment.time }}</em>
             </div>
             <div class="mycomment-content">
-                <h1>问题：在《开国大典》这篇课文中你印象最深刻的场景？</h1>
+                <h1>问题：{{ comment.answer.question.question }}？</h1>
             </div>
             <div class="mycomment-answer">
-                <h1>评论：&nbsp;我觉得你说的很有道理！</h1>
+                <h1>评论：&nbsp;{{ comment.comment }}</h1>
             </div>
         </div>
-        <div class="mycomment">
-            <div class="mycomment-title">
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <span>谢斌</span>
-                <i><img src="{{ EYEGIC_STATIC }}images/toward.png"></i>
-                <span>倩倩</span>
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <em class="fr mycomment-date">17-03-04</em>
-            </div>
-            <div class="mycomment-content">
-                <h1>问题：在《开国大典》这篇课文中你印象最深刻的场景？</h1>
-            </div>
-            <div class="mycomment-answer">
-                <h1>评论：&nbsp;我觉得你说的很有道理！</h1>
-            </div>
-        </div>
-        <div class="mycomment">
-            <div class="mycomment-title">
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <span>谢斌</span><i><img src="{{ EYEGIC_STATIC }}images/toward.png"></i><span>倩倩</span>
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <em class="fr mycomment-date">17-03-04</em>
-            </div>
-            <div class="mycomment-content">
-                <h1>问题：在《开国大典》这篇课文中你印象最深刻的场景？</h1>
-            </div>
-            <div class="mycomment-answer">
-                <h1>评论：&nbsp;我觉得你说的很有道理！</h1>
-            </div>
-        </div>
-        <div class="mycomment">
-            <div class="mycomment-title">
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <span>谢斌</span><i><img src="{{ EYEGIC_STATIC }}images/toward.png"></i><span>倩倩</span>
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <em class="fr mycomment-date">17-03-04</em>
-            </div>
-            <div class="mycomment-content">
-                <h1>问题：在《开国大典》这篇课文中你印象最深刻的场景？</h1>
-            </div>
-            <div class="mycomment-answer">
-                <h1>评论：&nbsp;我觉得你说的很有道理！</h1>
-            </div>
-        </div>
-        <div class="mycomment">
-            <div class="mycomment-title">
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <span>谢斌</span><i><img src="{{ EYEGIC_STATIC }}images/toward.png"></i><span>倩倩</span>
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <em class="fr mycomment-date">17-03-04</em>
-            </div>
-            <div class="mycomment-content">
-                <h1>问题：在《开国大典》这篇课文中你印象最深刻的场景？</h1>
-            </div>
-            <div class="mycomment-answer">
-                <h1>评论：&nbsp;我觉得你说的很有道理！</h1>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </body>
 </html>

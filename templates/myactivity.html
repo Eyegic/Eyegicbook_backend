@@ -19,39 +19,19 @@
     	<h1 class="header-title">我的动态</h1>
     </div>
     <div class="container-grey">
+        {% for foo in activity %}
         <div class="activity">
             <div class="activity-title">
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <span>08:36 14/03/2017</span>
+                <span><img src="{{ EYEGIC_STATIC }}images/{{ user.avater }}"></span>
+                <span>{{ foo.time }}</span>
             </div>
-            <h1>完成了《引人注目的Google标志》课文的课后讨论习题</h1>
+            <h1>完成了《{{ foo.question.booktext.title }}》课文的课后讨论习题</h1>
             <div class="activity-book">
-                <div class="book-item"><img src="{{ EYEGIC_STATIC }}images/chinese1a.jpg" class="book-item-pic"></div>
-                <div class="book-item"><h2>沪教版一年级语文上</h2><div><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span></div></div>
+                <div class="book-item"><img src="{{ EYEGIC_STATIC }}images/{{ foo.question.booktext.unit.book.cover }}" class="book-item-pic"></div>
+                <div class="book-item"><h2>{{ foo.question.booktext.unit.book.bookname }}</h2><div><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span></div></div>
             </div>
         </div>
-        <div class="activity">
-            <div class="activity-title">
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <span>08:36 14/03/2017</span>
-            </div>
-            <h1>完成了《引人注目的Google标志》课文的课后讨论习题</h1>
-            <div class="activity-book">
-                <div class="book-item"><img src="{{ EYEGIC_STATIC }}images/chinese1a.jpg" class="book-item-pic"></div>
-                <div class="book-item"><h2>沪教版一年级语文上</h2><div><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star.png" class="star-pic"></span></div></div>
-            </div>
-        </div>
-       <div class="activity">
-            <div class="activity-title">
-                <span><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></span>
-                <span>08:36 14/03/2017</span>
-            </div>
-            <h1>完成了《引人注目的Google标志》课文的课后讨论习题</h1>
-            <div class="activity-book">
-                <div class="book-item"><img src="{{ EYEGIC_STATIC }}images/chinese1a.jpg" class="book-item-pic"></div>
-                <div class="book-item"><h2>沪教版一年级语文上</h2><div><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span><span><img src="{{ EYEGIC_STATIC }}images/star-light.png" class="star-pic"></span></div></div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </body>
 </html>

@@ -177,12 +177,16 @@ def makeanswer(request):
 def myactivity(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
-    return render(request,'myactivity.html')
+    user=User.objects.get(phone=request.session.get('username'))
+    activity=Answer.objects.filter(user=user)
+    return render(request,'myactivity.html',{'activity':activity,'user':user})
 
 def mycomment(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')
-    return render(request,'mycomment.html')
+    user = User.objects.get(phone=request.session.get('username'))
+    comments=Comment.objects.filter(user=user)
+    return render(request,'mycomment.html',{'comments':comments})
 
 def mymessage(request):
     if not isLogin(request):
