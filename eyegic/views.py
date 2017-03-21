@@ -1,7 +1,12 @@
 #-*-coding:utf-8-*-
 from django.shortcuts import render,HttpResponseRedirect,HttpResponse
 from eyegic.models import *
+from django.conf import settings
 # Create your views here.
+
+def global_setting(request):
+    return {'EYEGIC_STATIC':settings.EYEGIC_STATIC}
+
 def center(request):
     if not isLogin(request):
         return HttpResponseRedirect('login')

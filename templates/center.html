@@ -1,4 +1,3 @@
-{% load staticfiles %}
 <!doctype html>
 <html>
 <head>
@@ -10,9 +9,19 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/reset.css' %} ">
-<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/main.css' %} ">
-<script type="text/javascript" src="{% static 'eyegic/js/jquery.min.js' %} "></script>
+<link rel="stylesheet" type="text/css" href="{{ EYEGIC_STATIC }}css/reset.css">
+<link rel="stylesheet" type="text/css" href="{{ EYEGIC_STATIC }}css/main.css">
+<script type="text/javascript" src="{{ EYEGIC_STATIC }}js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.info-sign').click(function(){
+			$('.info-sign').css("background-color","#ddd");
+			var count = $('.info-regist h1').text();
+			count++;
+			$('.info-regist h1').text(count);
+		})
+	})
+</script>
 </head>
 <body>
     <!-- 顶部导航栏 -->
@@ -24,12 +33,12 @@
 	<div class="container-grey">
 	    <div class="hr15"></div>
 		<div class="info-group clearfix">
-			<div class="info-head fl"><img src="{% static 'eyegic/images/yoga.jpg' %} "></div>
+			<div class="info-head fl"><img src="{{ EYEGIC_STATIC }}images/yoga.jpg"></div>
 			<div class="info-name fl">
 				<h>Pandaice</h>
 				<div class="info-level">LV1</div>
 			</div>
-			<div class="info-regist fl">
+			<div class="info-regist fr">
 				<h>连续签到</h>
 				<h1>7</h1>
 				<div class="info-sign">签到</div>
@@ -38,36 +47,36 @@
 		<div class="hr15"></div>
 		<div class="item-group">
 			<a href="mycomment.html"><div class="item-single clearfix">
-				<span class="item-left fl"><img src="{% static 'eyegic/images/bookstore.png' %} "></span>
+				<span class="item-left fl"><img src="{{ EYEGIC_STATIC }}images/bookstore.png"></span>
 				<div class="item-middle fl">我的评论</div>
-				<span class="item-right fr"><img src="{% static 'eyegic/images/arrow.png' %} "></span>
+				<span class="item-right fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span>
 			</div></a>
 			<div class="hr1"></div>
 			<a href="mymessage.html"><div class="item-single clearfix">
-				<span class="item-left fl"><img src="{% static 'eyegic/images/bookstore.png' %} "></span>
+				<span class="item-left fl"><img src="{{ EYEGIC_STATIC }}images/bookstore.png"></span>
 				<div class="item-middle fl">消息提醒</div>
-				<span class="item-right fr"><img src="{% static 'eyegic/images/arrow.png' %} "></span>
+				<span class="item-right fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span>
 			</div></a>
 		</div>
 		<div class="hr15"></div>
 		<div class="item-group">
 			<a href="myactivity.html"><div class="item-single clearfix">
-				<span class="item-left fl"><img src="{% static 'eyegic/images/bookstore.png' %} "></span>
+				<span class="item-left fl"><img src="{{ EYEGIC_STATIC }}images/bookstore.png"></span>
 				<div class="item-middle fl">我的动态</div>
-				<span class="item-right fr"><img src="{% static 'eyegic/images/arrow.png' %} "></span>
+				<span class="item-right fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span>
 			</div></a>
 			<div class="hr1"></div>
 			<a href="mytree.html"><div class="item-single clearfix">
-				<span class="item-left fl"><img src="{% static 'eyegic/images/bookstore.png' %} "></span>
+				<span class="item-left fl"><img src="{{ EYEGIC_STATIC }}images/bookstore.png"></span>
 				<div class="item-middle fl">我的知识树</div>
-				<span class="item-right fr"><img src="{% static 'eyegic/images/arrow.png' %} "></span>
+				<span class="item-right fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span>
 			</div></a>
 		</div>
 		<div class="hr15"></div>
 		<a href="setup.html"><div class="item-single clearfix">
-			<span class="item-left fl"><img src="{% static 'eyegic/images/bookstore.png' %} "></span>
+			<span class="item-left fl"><img src="{{ EYEGIC_STATIC }}images/bookstore.png"></span>
 			<div class="item-middle fl">我的设置</div>
-			<span class="item-right fr"><img src="{% static 'eyegic/images/arrow.png' %} "></span>
+			<span class="item-right fr"><img src="{{ EYEGIC_STATIC }}images/arrow.png"></span>
 		</div></a>
 		<div class="hr298"></div>
 	</div>
@@ -76,22 +85,22 @@
 	<div class="footer">
 		<ul class="navbar">
 			<li>
-				<div class="icon"><a href="mybook.html"><img src="{% static 'eyegic/images/bookshelf.png' %} " alt="icon"></a></div>
+				<div class="icon"><a href="mybook.html"><img src="{{ EYEGIC_STATIC }}images/bookshelf.png" alt="icon"></a></div>
 				<h>书架</h>
 			</li>
 			<li>
-				<div class="icon"><a href="index.html"><img src="{% static 'eyegic/images/bookstore.png' %} " alt="icon"></a></div>
+				<div class="icon"><a href="index.html"><img src="{{ EYEGIC_STATIC }}images/bookstore.png" alt="icon"></a></div>
 				<h>书城</h>
 			</li>
 			<li>
-				<div class="icon-round"><img src="{% static 'eyegic/images/scan.png' %} " alt="icon"></div>
+				<div class="icon-round"><img src="{{ EYEGIC_STATIC }}images/scan.png" alt="icon"></div>
 			</li>
 			<li>
-				<div class="icon"><a href="bbs.html"><img src="{% static 'eyegic/images/bbs.png' %} " alt="icon"></a></div>
+				<div class="icon"><a href="bbs.html"><img src="{{ EYEGIC_STATIC }}images/bbs.png" alt="icon"></a></div>
 				<h>互动圈</h>
 			</li>
 			<li>
-				<div class="icon"><img src="{% static 'eyegic/images/center-green.png' %} " alt="icon"></div>
+				<div class="icon"><img src="{{ EYEGIC_STATIC }}images/center-green.png" alt="icon"></div>
 				<h style="color:#00b38a;">我</h>
 			</li>
 		</ul>

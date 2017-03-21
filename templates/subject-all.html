@@ -1,4 +1,3 @@
-{% load staticfiles %}
 <!doctype html>
 <html>
 <head>
@@ -10,44 +9,44 @@
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/reset.css' %} ">
-<link rel="stylesheet" type="text/css" href="{% static 'eyegic/css/main.css' %} ">
-<script type="text/javascript" src="{% static 'eyegic/js/jquery.min.js' %} "></script>
+<link rel="stylesheet" type="text/css" href="{{ EYEGIC_STATIC }}css/reset.css">
+<link rel="stylesheet" type="text/css" href="{{ EYEGIC_STATIC }}css/main.css">
+<script type="text/javascript" src="{{ EYEGIC_STATIC }}js/jquery.min.js"></script>
 </head>
 <body>
     <!-- 顶部导航栏 -->
 	<div class="header">
-		<a href="javascript:history.back()"><span><img src="{% static 'eyegic/images/back.png' %} " class="header-icon-left"></span></a>
+		<a href="javascript:history.back()"><span><img src="{{ EYEGIC_STATIC }}images/back.png" class="header-icon-left"></span></a>
 		<h1 class="header-title">语文</h1>
-		<a href="search.html"><span><img src="{% static 'eyegic/images/search.png' %} " class="header-icon-right"></span></a>
+		<a href="search.html"><span><img src="{{ EYEGIC_STATIC }}images/search.png" class="header-icon-right"></span></a>
 	</div>
 	<!-- 顶部导航栏结束 -->
 	<!-- 页面内容 -->
 	<div class="container">
 		<div class="bookitem">
 			<div class="bookcover">
-				<a href="bookdetail.html"><img src="{% static 'eyegic/images/chinese1a.jpg' %} " alt="bookcover"></a>
+				<a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/chinese1a.jpg" alt="bookcover"></a>
 			</div>
 			<h class="bookname">小学一年级语文</h>
 			<h class="download">收藏</h>
 		</div>
 		<div class="bookitem">
 			<div class="bookcover">
-				<a href="bookdetail.html"><img src="{% static 'eyegic/images/chinese2a.png' %} " alt="bookcover"></a>
+				<a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/chinese2a.png" alt="bookcover"></a>
 			</div>
 			<h class="bookname">小学二年级语文</h>
 			<h class="download">收藏</h>
 		</div>
 		<div class="bookitem">
 			<div class="bookcover">
-				<a href="bookdetail.html"><img src="{% static 'eyegic/images/english4b.png' %} " alt="bookcover"></a>
+				<a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/english4b.png" alt="bookcover"></a>
 			</div>
 			<h class="bookname">小学四年级英语</h>
 			<h class="download">收藏</h>
 		</div>
 		<div class="bookitem">
 			<div class="bookcover">
-				<a href="bookdetail.html"><img src="{% static 'eyegic/images/math3a.png' %} " alt="bookcover"></a>
+				<a href="bookdetail.html"><img src="{{ EYEGIC_STATIC }}images/math3a.png" alt="bookcover"></a>
 			</div>
 			<h class="bookname">小学三年级数学</h>
 			<h class="download">收藏</h>
